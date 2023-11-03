@@ -440,7 +440,7 @@ layer_0/tile_data = PackedInt32Array(524299, 786432, 14, 524298, 786432, 14, 524
 light_mask = 3
 visibility_layer = 7
 position = Vector2(105, 119)
-scale = Vector2(2, 2)
+scale = Vector2(1, 1)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(104, 80)
