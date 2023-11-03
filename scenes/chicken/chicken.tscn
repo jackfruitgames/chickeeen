@@ -4,15 +4,17 @@
 [ext_resource type="Texture2D" uid="uid://ck8icr1crrqxw" path="res://scenes/chicken/Chicken-0001.png" id="2_oiiyn"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6jixd"]
-radius = 16.0
+radius = 12.1655
 
 [node name="chicken" type="CharacterBody2D"]
 script = ExtResource("1_idpav")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -1)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_oiiyn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 1)
 scale = Vector2(0.5, 0.5)
 shape = SubResource("CircleShape2D_6jixd")
