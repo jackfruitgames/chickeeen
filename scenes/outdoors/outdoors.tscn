@@ -2099,5 +2099,14 @@ layer_1/tile_data = PackedInt32Array(-720892, 131075, 0, -655354, 131075, 0, -58
 [node name="chicken" parent="." instance=ExtResource("3_jwf5e")]
 position = Vector2(182, 235)
 
+[node name="Camera2D" type="Camera2D" parent="chicken"]
+zoom = Vector2(3, 3)
+limit_left = -500
+limit_top = -500
+limit_right = 1500
+limit_bottom = 1000
+limit_smoothed = true
+position_smoothing_enabled = true
+
 [node name="food" parent="." instance=ExtResource("4_vqb3o")]
 position = Vector2(647, 233)
