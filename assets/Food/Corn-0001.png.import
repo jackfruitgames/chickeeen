@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1i268jkf1s1s"
-path="res://.godot/imported/FakeChicken.png-97103b2a3c78b1b1652af3ebfeddbca9.ctex"
+uid="uid://c6b7mcpsycy31"
+path="res://.godot/imported/Corn-0001.png-6c16eeddcd4da25176f44fbeb74f51ff.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/chicken/FakeChicken.png"
-dest_files=["res://.godot/imported/FakeChicken.png-97103b2a3c78b1b1652af3ebfeddbca9.ctex"]
+source_file="res://assets/Food/Corn-0001.png"
+dest_files=["res://.godot/imported/Corn-0001.png-6c16eeddcd4da25176f44fbeb74f51ff.ctex"]
 
 [params]
 

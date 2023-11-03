@@ -1,13 +1,13 @@
 [gd_scene load_steps=8 format=3 uid="uid://bbpcd0gp83hu8"]
 
-[ext_resource type="Texture2D" uid="uid://c5y72eft3uccg" path="res://scenes/food/fakeFood.png" id="1_dp20w"]
 [ext_resource type="Script" path="res://scenes/food/eating.gd" id="1_vc0rm"]
-[ext_resource type="AudioStream" uid="uid://17q35ic3860v" path="res://assets/sound/chicken_eat0.mp3" id="3_hvbmr"]
-[ext_resource type="AudioStream" uid="uid://ccmsjgltvhh2g" path="res://assets/sound/chicken_eat1.mp3" id="4_o0jy3"]
-[ext_resource type="AudioStream" uid="uid://d1nlqy5k0vsy4" path="res://assets/sound/chicken_eat2.mp3" id="5_hsk8a"]
+[ext_resource type="Texture2D" uid="uid://c1nhvftamn5vy" path="res://scenes/food/Corn-0001.png" id="2_oxla4"]
+[ext_resource type="AudioStream" uid="uid://c2sq82vsso3h7" path="res://assets/sound/chicken_eat0.mp3" id="3_hvbmr"]
+[ext_resource type="AudioStream" uid="uid://uswvwdkasr3f" path="res://assets/sound/chicken_eat1.mp3" id="4_o0jy3"]
+[ext_resource type="AudioStream" uid="uid://daqvrvyg2offc" path="res://assets/sound/chicken_eat2.mp3" id="5_hsk8a"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0v40n"]
-size = Vector2(250, 250)
+size = Vector2(32, 32)
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_bmy6n"]
 streams_count = 3
@@ -22,7 +22,7 @@ stream_2/weight = 1.0
 script = ExtResource("1_vc0rm")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_dp20w")
+texture = ExtResource("2_oxla4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_0v40n")
