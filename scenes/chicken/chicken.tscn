@@ -11,7 +11,7 @@
 [ext_resource type="AudioStream" uid="uid://vcmji10sdmur" path="res://assets/sound/chicken_walk2.mp3" id="9_jcdfi"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6jixd"]
-radius = 16.0
+radius = 12.6491
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_prgh5"]
 streams_count = 3
@@ -43,6 +43,7 @@ script = ExtResource("1_idpav")
 texture = ExtResource("2_oiiyn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4)
 shape = SubResource("CircleShape2D_6jixd")
 
 [node name="CluckTimer" type="Timer" parent="."]
