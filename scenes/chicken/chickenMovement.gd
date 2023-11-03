@@ -7,5 +7,7 @@ func _physics_process(delta):
 	velocity = input_direction * SPEED
 	if input_direction != Vector2(0, 0) and !$WalkAudioStreamPlayer2D.playing:
 		$WalkAudioStreamPlayer2D.play()
+	
+	$Sprite2D.flip_h = input_direction.x < 0
 
 	move_and_slide()
