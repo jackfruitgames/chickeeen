@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://baeumj81wsuku"]
+[gd_scene load_steps=12 format=3 uid="uid://baeumj81wsuku"]
 
 [ext_resource type="Texture2D" uid="uid://bdg0up5bmu5eh" path="res://assets/Tilesets/Interior/TilesetInteriorFloor.png" id="1_64b3a"]
 [ext_resource type="Texture2D" uid="uid://b2j2h2ewwc50c" path="res://assets/Tilesets/Interior/TilesetWallSimple.png" id="2_6hes0"]
 [ext_resource type="Texture2D" uid="uid://i4b8xsya6r7j" path="res://assets/Tilesets/Interior/Elements.png" id="3_w6h24"]
 [ext_resource type="PackedScene" uid="uid://cs8d3sukjl1q7" path="res://scenes/chicken/chicken.tscn" id="4_u651s"]
 [ext_resource type="Script" path="res://scenes/house/Door.gd" id="5_7bfkj"]
+[ext_resource type="AudioStream" uid="uid://cg621net1qrit" path="res://assets/music/guitar-mellow-beat-20221122-128596.mp3" id="6_avb7m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lrxv5"]
 texture = ExtResource("1_64b3a")
@@ -1286,5 +1287,11 @@ script = ExtResource("5_7bfkj")
 position = Vector2(-0.75, 18.5)
 scale = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_y4yme")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(93, 69)
+stream = ExtResource("6_avb7m")
+volume_db = -25.0
+autoplay = true
 
 [connection signal="body_entered" from="Door" to="Door" method="_on_body_entered"]
