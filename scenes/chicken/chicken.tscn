@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cs8d3sukjl1q7"]
+[gd_scene load_steps=13 format=3 uid="uid://cs8d3sukjl1q7"]
 
 [ext_resource type="Script" path="res://scenes/chicken/chickenMovement.gd" id="1_idpav"]
 [ext_resource type="Texture2D" uid="uid://ck8icr1crrqxw" path="res://scenes/chicken/Chicken-0001.png" id="2_oiiyn"]
@@ -6,9 +6,12 @@
 [ext_resource type="AudioStream" uid="uid://di4jrrk0qowdi" path="res://assets/sound/chicken_cluck0.mp3" id="3_ooivu"]
 [ext_resource type="AudioStream" uid="uid://bki1yaw285bf0" path="res://assets/sound/chicken_cluck1.mp3" id="4_qrlbq"]
 [ext_resource type="AudioStream" uid="uid://dswqsbnusk0ip" path="res://assets/sound/chicken_cluck2.mp3" id="5_k10mf"]
+[ext_resource type="AudioStream" uid="uid://dq26sc2hlncpn" path="res://assets/sound/chicken_walk0.mp3" id="7_g0jjt"]
+[ext_resource type="AudioStream" uid="uid://8cuo3c0ep8rr" path="res://assets/sound/chicken_walk1.mp3" id="8_nvlb5"]
+[ext_resource type="AudioStream" uid="uid://vcmji10sdmur" path="res://assets/sound/chicken_walk2.mp3" id="9_jcdfi"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6jixd"]
-radius = 12.1655
+radius = 16.0
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_prgh5"]
 streams_count = 3
@@ -21,17 +24,22 @@ stream_1/weight = 1.0
 stream_2/stream = ExtResource("5_k10mf")
 stream_2/weight = 1.0
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_ddlwf"]
+streams_count = 3
+stream_0/stream = ExtResource("7_g0jjt")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("8_nvlb5")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("9_jcdfi")
+stream_2/weight = 1.0
+
 [node name="chicken" type="CharacterBody2D"]
 script = ExtResource("1_idpav")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -1)
-scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_oiiyn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 1)
-scale = Vector2(0.5, 0.5)
 shape = SubResource("CircleShape2D_6jixd")
 
 [node name="CluckTimer" type="Timer" parent="."]
@@ -41,5 +49,8 @@ autostart = true
 [node name="CluckAudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = SubResource("AudioStreamRandomizer_prgh5")
 script = ExtResource("3_f7rxb")
+
+[node name="WalkAudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = SubResource("AudioStreamRandomizer_ddlwf")
 
 [connection signal="timeout" from="CluckTimer" to="CluckAudioStreamPlayer2D" method="_on_cluck_timer_timeout"]
