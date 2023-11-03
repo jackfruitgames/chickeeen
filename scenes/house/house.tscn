@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b2j2h2ewwc50c" path="res://assets/Tilesets/Interior/TilesetWallSimple.png" id="2_6hes0"]
 [ext_resource type="Texture2D" uid="uid://i4b8xsya6r7j" path="res://assets/Tilesets/Interior/Elements.png" id="3_w6h24"]
 [ext_resource type="PackedScene" uid="uid://cs8d3sukjl1q7" path="res://scenes/chicken/chicken.tscn" id="4_u651s"]
+[ext_resource type="PackedScene" uid="uid://80jawqck3m24" path="res://scenes/ui/ui.tscn" id="5_7b6qm"]
 [ext_resource type="Script" path="res://scenes/house/Door.gd" id="5_7bfkj"]
 [ext_resource type="AudioStream" uid="uid://cg621net1qrit" path="res://assets/music/guitar-mellow-beat-20221122-128596.mp3" id="6_avb7m"]
 
@@ -1275,6 +1276,8 @@ scale = Vector2(1, 1)
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(104, 80)
 zoom = Vector2(4, 4)
+
+[node name="UILayer" parent="." instance=ExtResource("5_7b6qm")]
 
 [node name="Door" type="Area2D" parent="."]
 position = Vector2(105, 119)
