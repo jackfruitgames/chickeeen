@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cfdcr2ygcy652" path="res://assets/Tilesets/TilesetNature.png" id="2_b8x7u"]
 [ext_resource type="Texture2D" uid="uid://1mb36i41i2wb" path="res://assets/Tilesets/TilesetHouse.png" id="3_axej0"]
 [ext_resource type="PackedScene" uid="uid://cs8d3sukjl1q7" path="res://scenes/chicken/chicken.tscn" id="3_jwf5e"]
-[ext_resource type="PackedScene" uid="uid://bbpcd0gp83hu8" path="res://scenes/food/food.tscn" id="4_vqb3o"]
+[ext_resource type="Script" path="res://scenes/outdoors/spawnFoods.gd" id="6_5tcl3"]
 [ext_resource type="Script" path="res://scenes/outdoors/Door.gd" id="6_kxklt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lvwm0"]
@@ -5044,9 +5044,6 @@ limit_bottom = 1000
 limit_smoothed = true
 position_smoothing_enabled = true
 
-[node name="food" parent="." instance=ExtResource("4_vqb3o")]
-position = Vector2(647, 233)
-
 [node name="Door" type="Area2D" parent="."]
 collision_layer = 2
 collision_mask = 2
@@ -5055,5 +5052,8 @@ script = ExtResource("6_kxklt")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Door"]
 position = Vector2(184, 216.5)
 shape = SubResource("RectangleShape2D_krwh3")
+
+[node name="foods" type="Node2D" parent="."]
+script = ExtResource("6_5tcl3")
 
 [connection signal="body_entered" from="Door" to="Door" method="_on_body_entered"]
