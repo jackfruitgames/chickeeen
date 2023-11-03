@@ -2098,7 +2098,6 @@ layer_1/tile_data = PackedInt32Array(-720892, 131075, 0, -655354, 131075, 0, -58
 
 [node name="chicken" parent="." instance=ExtResource("3_jwf5e")]
 position = Vector2(182, 235)
-scale = Vector2(0.5, 0.5)
 
 [node name="food" parent="." instance=ExtResource("4_vqb3o")]
 position = Vector2(647, 233)
