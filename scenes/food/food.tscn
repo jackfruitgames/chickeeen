@@ -7,7 +7,8 @@
 [ext_resource type="AudioStream" uid="uid://daqvrvyg2offc" path="res://assets/sound/chicken_eat2.mp3" id="5_hsk8a"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ywk0f"]
-height = 32.0
+radius = 5.0
+height = 10.0
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_bmy6n"]
 streams_count = 3
@@ -22,10 +23,11 @@ stream_2/weight = 1.0
 script = ExtResource("1_vc0rm")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("2_oxla4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-6, 0)
+position = Vector2(-2, 0)
 shape = SubResource("CapsuleShape2D_ywk0f")
 
 [node name="EatAudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
