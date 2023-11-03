@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="chickeeen"
-run/main_scene="res://scenes/testscene/testscene.tscn"
+run/main_scene="res://scenes/outdoors/outdoors.tscn"
 config/features=PackedStringArray("4.1", "GL Compatibility")
 config/icon="res://icon.svg"
 
