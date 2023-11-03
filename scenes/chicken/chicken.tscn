@@ -1,10 +1,25 @@
-[gd_scene load_steps=4 format=3 uid="uid://cs8d3sukjl1q7"]
+[gd_scene load_steps=9 format=3 uid="uid://cs8d3sukjl1q7"]
 
 [ext_resource type="Script" path="res://scenes/chicken/chickenMovement.gd" id="1_idpav"]
 [ext_resource type="Texture2D" uid="uid://ck8icr1crrqxw" path="res://scenes/chicken/Chicken-0001.png" id="2_oiiyn"]
+[ext_resource type="Script" path="res://scenes/chicken/chickenCluck.gd" id="3_f7rxb"]
+[ext_resource type="AudioStream" uid="uid://di4jrrk0qowdi" path="res://assets/sound/chicken_cluck0.mp3" id="3_ooivu"]
+[ext_resource type="AudioStream" uid="uid://bki1yaw285bf0" path="res://assets/sound/chicken_cluck1.mp3" id="4_qrlbq"]
+[ext_resource type="AudioStream" uid="uid://dswqsbnusk0ip" path="res://assets/sound/chicken_cluck2.mp3" id="5_k10mf"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6jixd"]
 radius = 12.1655
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_prgh5"]
+streams_count = 3
+playback_mode = 1
+random_pitch = 1.2
+stream_0/stream = ExtResource("3_ooivu")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("4_qrlbq")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("5_k10mf")
+stream_2/weight = 1.0
 
 [node name="chicken" type="CharacterBody2D"]
 script = ExtResource("1_idpav")
@@ -18,3 +33,13 @@ texture = ExtResource("2_oiiyn")
 position = Vector2(-1, 1)
 scale = Vector2(0.5, 0.5)
 shape = SubResource("CircleShape2D_6jixd")
+
+[node name="CluckTimer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[node name="CluckAudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = SubResource("AudioStreamRandomizer_prgh5")
+script = ExtResource("3_f7rxb")
+
+[connection signal="timeout" from="CluckTimer" to="CluckAudioStreamPlayer2D" method="_on_cluck_timer_timeout"]
