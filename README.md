@@ -13,3 +13,7 @@ You can:
  - Decorate your room at ngith whent its dangerous.
 
 Have fun you are not smart but you are happy.
+
+Assets used:
+	
+ - https://pixel-boy.itch.io/ninja-adventure-asset-pack

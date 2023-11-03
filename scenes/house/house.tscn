@@ -1,3 +1,9 @@
-[gd_scene format=3 uid="uid://baeumj81wsuku"]
+[gd_scene load_steps=2 format=3 uid="uid://baeumj81wsuku"]
+
+[sub_resource type="TileSet" id="TileSet_jdn4o"]
 
 [node name="house" type="Node2D"]
+
+[node name="Outdoors" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_jdn4o")
+format = 2
