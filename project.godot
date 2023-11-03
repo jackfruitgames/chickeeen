@@ -15,6 +15,10 @@ run/main_scene="res://scenes/testscene/testscene.tscn"
 config/features=PackedStringArray("4.1", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GameState="*res://global/gameState.gd"
+
 [input]
 
 move_left={
