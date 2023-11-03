@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://7vql1uclie4w"]
+[gd_scene load_steps=12 format=3 uid="uid://7vql1uclie4w"]
 
 [ext_resource type="Texture2D" uid="uid://ciab5ofii7qw6" path="res://assets/Tilesets/TilesetFloor.png" id="1_24wf7"]
 [ext_resource type="Texture2D" uid="uid://cfdcr2ygcy652" path="res://assets/Tilesets/TilesetNature.png" id="2_b8x7u"]
 [ext_resource type="Texture2D" uid="uid://1mb36i41i2wb" path="res://assets/Tilesets/TilesetHouse.png" id="3_axej0"]
 [ext_resource type="PackedScene" uid="uid://cs8d3sukjl1q7" path="res://scenes/chicken/chicken.tscn" id="3_jwf5e"]
 [ext_resource type="PackedScene" uid="uid://bbpcd0gp83hu8" path="res://scenes/food/food.tscn" id="4_vqb3o"]
+[ext_resource type="Script" path="res://scenes/outdoors/Door.gd" id="6_kxklt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lvwm0"]
 texture = ExtResource("1_24wf7")
@@ -5012,6 +5013,9 @@ sources/1 = SubResource("TileSetAtlasSource_lvwm0")
 sources/3 = SubResource("TileSetAtlasSource_s32nt")
 sources/4 = SubResource("TileSetAtlasSource_e1qjw")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_krwh3"]
+size = Vector2(14, 13)
+
 [node name="outdoors" type="Node2D"]
 
 [node name="Map" type="TileMap" parent="."]
@@ -5029,7 +5033,7 @@ layer_1/tile_data = PackedInt32Array(-720892, 131075, 0, -655354, 131075, 0, -58
 
 [node name="chicken" parent="." instance=ExtResource("3_jwf5e")]
 z_index = 2
-position = Vector2(182, 235)
+position = Vector2(185, 233)
 
 [node name="Camera2D" type="Camera2D" parent="chicken"]
 zoom = Vector2(4, 4)
@@ -5042,3 +5046,14 @@ position_smoothing_enabled = true
 
 [node name="food" parent="." instance=ExtResource("4_vqb3o")]
 position = Vector2(647, 233)
+
+[node name="Door" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("6_kxklt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door"]
+position = Vector2(184, 216.5)
+shape = SubResource("RectangleShape2D_krwh3")
+
+[connection signal="body_entered" from="Door" to="Door" method="_on_body_entered"]
