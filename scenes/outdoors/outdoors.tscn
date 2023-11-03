@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://7vql1uclie4w"]
+[gd_scene load_steps=18 format=3 uid="uid://7vql1uclie4w"]
 
 [ext_resource type="Texture2D" uid="uid://ciab5ofii7qw6" path="res://assets/Tilesets/TilesetFloor.png" id="1_24wf7"]
 [ext_resource type="Texture2D" uid="uid://cfdcr2ygcy652" path="res://assets/Tilesets/TilesetNature.png" id="2_b8x7u"]
@@ -7,6 +7,8 @@
 [ext_resource type="Script" path="res://scenes/outdoors/spawnFoods.gd" id="6_5tcl3"]
 [ext_resource type="Script" path="res://scenes/outdoors/Door.gd" id="6_kxklt"]
 [ext_resource type="PackedScene" uid="uid://80jawqck3m24" path="res://scenes/ui/ui.tscn" id="7_e1u4k"]
+[ext_resource type="Script" path="res://scenes/outdoors/night.gd" id="8_ar56u"]
+[ext_resource type="Script" path="res://scenes/outdoors/dim.gd" id="9_lwkoc"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_v2oef"]
 tile_data = PackedInt32Array(327680, 393219, 0, 327681, 393219, 0, 327682, 393219, 0, 393218, 131075, 0, 327683, 131075, 0, 393219, 131075, 0, 4, 131075, 0, 65540, 131075, 0, 131076, 131075, 0, 262148, 131075, 0, 393220, 131075, 0, 65541, 131075, 0, 131077, 131075, 0, 196613, 131075, 0, 262149, 131075, 0, 327685, 131075, 0, 196614, 131075, 0, 262150, 131075, 0, 327686, 131075, 0, 65543, 131075, 0, 131079, 131075, 0, 196615, 131075, 0, 262151, 131075, 0, 327687, 131075, 0, 8, 131075, 0, 65544, 131075, 0, 131080, 131075, 0, 196616, 131075, 0, 262152, 131075, 0, 65545, 131075, 0, 196617, 131075, 0, 131082, 131075, 0, 131083, 131075, 0, 196620, 131075, 0)
@@ -5071,4 +5073,12 @@ script = ExtResource("6_5tcl3")
 
 [node name="UILayer" parent="." instance=ExtResource("7_e1u4k")]
 
+[node name="NightTimer" type="Timer" parent="."]
+autostart = true
+script = ExtResource("8_ar56u")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+script = ExtResource("9_lwkoc")
+
 [connection signal="body_entered" from="Door" to="Door" method="_on_body_entered"]
+[connection signal="timeout" from="NightTimer" to="NightTimer" method="_on_timeout"]

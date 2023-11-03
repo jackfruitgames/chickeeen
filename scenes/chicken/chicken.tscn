@@ -1,11 +1,11 @@
-[gd_scene load_steps=17 format=3 uid="uid://cs8d3sukjl1q7"]
+[gd_scene load_steps=19 format=3 uid="uid://cs8d3sukjl1q7"]
 
 [ext_resource type="Script" path="res://scenes/chicken/chickenMovement.gd" id="1_idpav"]
 [ext_resource type="Texture2D" uid="uid://ck8icr1crrqxw" path="res://scenes/chicken/Chicken-0001.png" id="2_oiiyn"]
 [ext_resource type="Script" path="res://scenes/chicken/chickenCluck.gd" id="3_f7rxb"]
-[ext_resource type="AudioStream" uid="uid://di4jrrk0qowdi" path="res://assets/sound/chicken_cluck0.mp3" id="3_ooivu"]
-[ext_resource type="AudioStream" uid="uid://bki1yaw285bf0" path="res://assets/sound/chicken_cluck1.mp3" id="4_qrlbq"]
-[ext_resource type="AudioStream" uid="uid://dswqsbnusk0ip" path="res://assets/sound/chicken_cluck2.mp3" id="5_k10mf"]
+[ext_resource type="AudioStream" uid="uid://2vxfqsfkccx5" path="res://assets/sound/chicken_cluck0.mp3" id="3_ooivu"]
+[ext_resource type="AudioStream" uid="uid://b2r888btaoarl" path="res://assets/sound/chicken_cluck1.mp3" id="4_qrlbq"]
+[ext_resource type="AudioStream" uid="uid://ds5br7r2ikurl" path="res://assets/sound/chicken_cluck2.mp3" id="5_k10mf"]
 [ext_resource type="AudioStream" uid="uid://dq26sc2hlncpn" path="res://assets/sound/chicken_walk0.mp3" id="7_g0jjt"]
 [ext_resource type="AudioStream" uid="uid://8cuo3c0ep8rr" path="res://assets/sound/chicken_walk1.mp3" id="8_nvlb5"]
 [ext_resource type="AudioStream" uid="uid://vcmji10sdmur" path="res://assets/sound/chicken_walk2.mp3" id="9_jcdfi"]
@@ -71,6 +71,15 @@ _data = {
 "chicken_default": SubResource("Animation_i2d2v")
 }
 
+[sub_resource type="Gradient" id="Gradient_6ng8f"]
+offsets = PackedFloat32Array(0, 0.689038)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_gvb1h"]
+gradient = SubResource("Gradient_6ng8f")
+fill = 1
+fill_from = Vector2(0.495726, 0.465812)
+
 [node name="chicken" type="CharacterBody2D"]
 scale = Vector2(0.5, 0.5)
 collision_layer = 3
@@ -102,5 +111,9 @@ libraries = {
 "": SubResource("AnimationLibrary_d6kr5")
 }
 script = ExtResource("10_ivrbn")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+texture = SubResource("GradientTexture2D_gvb1h")
+texture_scale = 5.98
 
 [connection signal="timeout" from="CluckTimer" to="CluckAudioStreamPlayer2D" method="_on_cluck_timer_timeout"]
