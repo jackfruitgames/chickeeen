@@ -2,6 +2,13 @@
 
 You are a chicken! You need to eat food, lay eggs and collect stuff.
 
+<p align="center">
+  <a href="https://eddex.itch.io/chickeeen" target="_blank">
+    <img src="img/play@2x.png" />
+  </a>
+</p>
+
+
 ## 🐔 Team
 
 - 🎨 [Brian](https://github.com/lextum): Head of Pixelart
