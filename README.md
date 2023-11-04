@@ -2,6 +2,16 @@
 
 You are a chicken! You need to eat food, lay eggs and collect stuff.
 
+## 🐔 Team
+
+- 🎨 [Brian](https://github.com/lextum): Head of Pixelart
+- 👾 [Jan](https://github.com/dev-jan): Head of AI
+- 🤯 [Benj](https://github.com/randombenj): Head of Feature Creep
+- 🎶 [Marco](https://github.com/eddex): Head of Sound Design
+
+
+## 🐤 The Game
+
 You can:
 
  - You can walk around
@@ -22,11 +32,11 @@ You can:
  - Decorate your room at ngith whent its dangerous.
  - Fight against our archenemy the flying cat
  - Do gardening
- 
 
 Have fun you are not smart but you are happy.
 
-## Game loop
+
+## 🐥 Game Loop
 
 - Eggs as currency, shops near or far good items far
 - Egg or level (level: speed, egg: currency)
@@ -36,8 +46,8 @@ Have fun you are not smart but you are happy.
 - Items: Torch, Speaker, Stick, Shotgun, Flamethrower, Veganism
 
 
-Assets used:
-	
- - https://pixel-boy.itch.io/ninja-adventure-asset-pack
+## 🍗 Assets used:
+
+ - [Ninja Adventure Asset Pack by Pixel-Boy and AAA](https://pixel-boy.itch.io/ninja-adventure-asset-pack)
  - [Road to Paris (Gypsy Jazz) by ArtMusic](https://pixabay.com/de/music/volk-road-to-paris-gypsy-jazz-144631/)
  - [Guitar Mellow Beat 20221122 by genxbeats](https://pixabay.com/de/music/schlagt-guitar-mellow-beat-20221122-128596/)
