@@ -18,6 +18,4 @@ func _process(delta):
 
 	if GameState.is_night:
 		night_progress = 1 - night_progress
-
-	print("light progress: ", night_progress)
 	light.energy = 1 - night_progress
