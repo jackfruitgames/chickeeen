@@ -81,7 +81,7 @@ gradient = SubResource("Gradient_6ng8f")
 fill = 1
 fill_from = Vector2(0.495726, 0.465812)
 
-[node name="chicken" type="CharacterBody2D"]
+[node name="chicken" type="CharacterBody2D" groups=["player"]]
 scale = Vector2(0.5, 0.5)
 collision_layer = 3
 collision_mask = 3
