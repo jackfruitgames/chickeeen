@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://80jawqck3m24"]
+[gd_scene load_steps=5 format=3 uid="uid://80jawqck3m24"]
 
-[ext_resource type="LabelSettings" uid="uid://b3dnwdl6xc1h6" path="res://scenes/ui/uiLabelStyle.tres" id="1_5dksh"]
+[ext_resource type="LabelSettings" path="res://scenes/ui/uiLabelStyle.tres" id="1_5dksh"]
 [ext_resource type="Script" path="res://scenes/ui/UpdateLevel.gd" id="2_fv3t8"]
 [ext_resource type="Script" path="res://scenes/ui/UpdateFoodProgress.gd" id="2_vufxw"]
+[ext_resource type="Script" path="res://scenes/ui/updateEggsValue.gd" id="4_6nopd"]
 
 [node name="UILayer" type="CanvasLayer"]
 
@@ -18,12 +19,15 @@ grow_vertical = 2
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 26.0
+offset_left = 40.0
+offset_top = 5.0
+offset_right = -40.0
+offset_bottom = 42.0
 grow_horizontal = 2
 
 [node name="FoodLabel" type="Label" parent="ui/HBoxContainer"]
 layout_mode = 2
-text = "      Food: "
+text = "Food: "
 label_settings = ExtResource("1_5dksh")
 
 [node name="ProgressBar" type="ProgressBar" parent="ui/HBoxContainer"]
@@ -41,6 +45,22 @@ label_settings = ExtResource("1_5dksh")
 
 [node name="LevelValueLabel" type="Label" parent="ui/HBoxContainer"]
 layout_mode = 2
-text = "0    "
+text = "0"
 label_settings = ExtResource("1_5dksh")
 script = ExtResource("2_fv3t8")
+
+[node name="SpacerLabel" type="Label" parent="ui/HBoxContainer"]
+layout_mode = 2
+text = "    "
+label_settings = ExtResource("1_5dksh")
+
+[node name="EggsLabel" type="Label" parent="ui/HBoxContainer"]
+layout_mode = 2
+text = "Eggs: "
+label_settings = ExtResource("1_5dksh")
+
+[node name="EggsValueLabel" type="Label" parent="ui/HBoxContainer"]
+layout_mode = 2
+text = "0    "
+label_settings = ExtResource("1_5dksh")
+script = ExtResource("4_6nopd")
