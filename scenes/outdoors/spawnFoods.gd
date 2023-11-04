@@ -1,6 +1,6 @@
 extends Node2D
 
-var NUMBER_OF_FOOD := 20
+var NUMBER_OF_FOOD := 200
 
 var MAX_X := 1000
 var MAX_Y := 700

@@ -12,5 +12,11 @@ func _on_body_entered(collided_object):
 			GameState.level += 1
 			GameState.score = GameState.INITIAL_SCORE
 
+		if (GameState.score > 4):
+			# allow the chicken to swim (not collide with water)
+			# starting from level 4
+			collided_object.set_collision_layer_value(4, false)
+			collided_object.set_collision_mask_value(4, false)
+			
 	# destroy food if it is spawned random inside a tree or some other object
 	queue_free()
