@@ -24,3 +24,7 @@ func _physics_process(delta):
 			var target_direction = (next_direction - current_enemy_position).normalized()
 			wolf.velocity = target_direction * (SPEED * delta)
 			wolf.move_and_slide()
+		for i in wolf.get_slide_collision_count():
+			var collision = wolf.get_slide_collision(i)
+			print("Death by wolf: ", collision.get_collider().name)
+			get_tree().change_scene_to_file("res://scenes/gameover/gameover.tscn")

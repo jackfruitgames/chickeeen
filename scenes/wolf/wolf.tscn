@@ -1,21 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://d7hhbhwn8gkb"]
+[gd_scene load_steps=4 format=3 uid="uid://d7hhbhwn8gkb"]
 
-[ext_resource type="Script" path="res://scenes/wolf/wolfcollider.gd" id="1_8nr5h"]
-[ext_resource type="Texture2D" uid="uid://d07o2xujcicyj" path="res://scenes/wolf/fakeWolf.png" id="1_wndap"]
+[ext_resource type="Texture2D" uid="uid://bf3f3hm601mco" path="res://scenes/wolf/Wolf-0002.png" id="2_etrxf"]
 [ext_resource type="Script" path="res://scenes/wolf/movement.gd" id="3_7ieju"]
 [ext_resource type="Script" path="res://scenes/wolf/killOnDay.gd" id="4_5u0x1"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_yhv2n"]
-radius = 16.0
-
 [node name="wolf" type="CharacterBody2D"]
-script = ExtResource("1_8nr5h")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_wndap")
+texture = ExtResource("2_etrxf")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_yhv2n")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(11, 16, 26, 16, 33, 10, 40, 6, 24, -12, -5, -2, -15, -3, -34, 13, -28, 17, -18, 18, -10, 18, 1, 17)
 
 [node name="killOnDay" type="Node" parent="."]
 script = ExtResource("4_5u0x1")
