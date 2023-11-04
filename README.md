@@ -26,6 +26,16 @@ You can:
 
 Have fun you are not smart but you are happy.
 
+## Game loop
+
+- Eggs as currency, shops near or far good items far
+- Egg or level (level: speed, egg: currency)
+- Enemies at night, increase per night
+- Must eat food for level and eggs, more food farther away
+- Levels: Movment
+- Items: Torch, Speaker, Stick, Shotgun, Flamethrower, Veganism
+
+
 Assets used:
 	
  - https://pixel-boy.itch.io/ninja-adventure-asset-pack
