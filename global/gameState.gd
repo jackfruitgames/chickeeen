@@ -12,6 +12,7 @@ var has_torch := false
 var has_speaker := false
 var has_stick := false
 var has_shotgun := false
+var has_sprint := false
 
 # -- game daytime state
 const TIME_FACTOR = 1/0.1

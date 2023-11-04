@@ -12,9 +12,12 @@ func _on_body_entered(collided_object):
 			GameState.level += 1
 			GameState.score = GameState.INITIAL_SCORE
 
-		if (GameState.score > 4):
+		if GameState.level > 3:
+			GameState.has_sprint = true
+
+		if (GameState.level > 4):
 			# allow the chicken to swim (not collide with water)
-			# starting from level 4
+			# starting from level 5
 			collided_object.set_collision_layer_value(4, false)
 			collided_object.set_collision_mask_value(4, false)
 			
