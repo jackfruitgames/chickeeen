@@ -11,11 +11,3 @@ func _physics_process(delta):
 		$Sprite2D.flip_h = input_direction.x < 0
 
 	move_and_slide()
-
-func _process(delta):
-	var night_progress = float(GameState.dawn_time) / float(GameState.DAWN_TIME)
-	var light: PointLight2D = find_child("PointLight2D")
-
-	if GameState.is_night:
-		night_progress = 1 - night_progress
-	light.energy = 1 - night_progress
