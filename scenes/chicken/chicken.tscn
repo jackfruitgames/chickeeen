@@ -3,9 +3,9 @@
 [ext_resource type="Script" path="res://scenes/chicken/chickenMovement.gd" id="1_idpav"]
 [ext_resource type="Texture2D" uid="uid://ck8icr1crrqxw" path="res://scenes/chicken/Chicken-0001.png" id="2_oiiyn"]
 [ext_resource type="Script" path="res://scenes/chicken/chickenCluck.gd" id="3_f7rxb"]
-[ext_resource type="AudioStream" uid="uid://di4jrrk0qowdi" path="res://assets/sound/chicken_cluck0.mp3" id="3_ooivu"]
-[ext_resource type="AudioStream" uid="uid://bki1yaw285bf0" path="res://assets/sound/chicken_cluck1.mp3" id="4_qrlbq"]
-[ext_resource type="AudioStream" uid="uid://dswqsbnusk0ip" path="res://assets/sound/chicken_cluck2.mp3" id="5_k10mf"]
+[ext_resource type="AudioStream" uid="uid://j23lpail1p57" path="res://assets/sound/chicken_cluck0.mp3" id="3_ooivu"]
+[ext_resource type="AudioStream" uid="uid://bthyencc6mu0g" path="res://assets/sound/chicken_cluck1.mp3" id="4_qrlbq"]
+[ext_resource type="AudioStream" uid="uid://bsxikwto3kcak" path="res://assets/sound/chicken_cluck2.mp3" id="5_k10mf"]
 [ext_resource type="AudioStream" uid="uid://dq26sc2hlncpn" path="res://assets/sound/chicken_walk0.mp3" id="7_g0jjt"]
 [ext_resource type="AudioStream" uid="uid://8cuo3c0ep8rr" path="res://assets/sound/chicken_walk1.mp3" id="8_nvlb5"]
 [ext_resource type="AudioStream" uid="uid://vcmji10sdmur" path="res://assets/sound/chicken_walk2.mp3" id="9_jcdfi"]
@@ -14,6 +14,21 @@
 [ext_resource type="Script" path="res://scenes/chicken/starving.gd" id="12_cucto"]
 [ext_resource type="Texture2D" uid="uid://cgp8fj3gmmdnk" path="res://assets/Latern/Latern-black.png" id="13_fm6sh"]
 [ext_resource type="Script" path="res://scenes/chicken/Latern.gd" id="14_b8l4w"]
+
+[sub_resource type="Animation" id="Animation_f51qs"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
 
 [sub_resource type="Animation" id="Animation_6qd0x"]
 resource_name = "lantern_swing"
@@ -30,21 +45,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [-0.698132, 0.698132, -0.698132]
-}
-
-[sub_resource type="Animation" id="Animation_f51qs"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4wrf8"]
@@ -103,6 +103,21 @@ tracks/1/keys = {
 "values": [0.0]
 }
 
+[sub_resource type="Animation" id="Animation_j0gy4"]
+resource_name = "backflip"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 6.28319]
+}
+
 [sub_resource type="Animation" id="Animation_i2d2v"]
 resource_name = "chicken_default"
 loop_mode = 1
@@ -117,21 +132,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(1.05, 1), Vector2(0.97, 1), Vector2(1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_j0gy4"]
-resource_name = "backflip"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 6.28319]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_d6kr5"]

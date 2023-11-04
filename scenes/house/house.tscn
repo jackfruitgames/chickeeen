@@ -1755,12 +1755,12 @@ sources/4 = SubResource("TileSetAtlasSource_68ce3")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y4yme"]
 size = Vector2(49, 12)
 
-[sub_resource type="Gradient" id="Gradient_fsym2"]
+[sub_resource type="Gradient" id="Gradient_mpm7j"]
 offsets = PackedFloat32Array(0.0978723, 0.668085)
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_uhb2u"]
-gradient = SubResource("Gradient_fsym2")
+gradient = SubResource("Gradient_mpm7j")
 fill = 1
 fill_from = Vector2(0.525641, 0.521368)
 
