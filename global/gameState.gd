@@ -1,7 +1,7 @@
 extends Node
 
 # -- game score state
-var score := 0
+var score := 50
 
 # -- game daytime state
 const TIME_FACTOR = 1/0.1
