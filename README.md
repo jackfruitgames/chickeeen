@@ -18,6 +18,7 @@ You can:
    - Level 8 Fly short distance
    - Level 9 Shoot with eggs
    - Level 10 Round house kick
+   - Level 11 - 100 Weapon unlock
  - Decorate your room at ngith whent its dangerous.
  - Fight against our archenemy the flying cat
  - Do gardening
