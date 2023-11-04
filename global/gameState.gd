@@ -1,7 +1,8 @@
 extends Node
 
 # -- game score state
-var score := 50
+const INITIAL_SCORE := 50
+var score := INITIAL_SCORE
 
 # -- game daytime state
 const TIME_FACTOR = 1/0.1
@@ -11,3 +12,9 @@ const DAWN_TIME := 60 * 0.5 * TIME_FACTOR # seconds
 var is_night := false
 var dawn_time := DAWN_TIME
 var day_duration := DAY_DURATION
+
+func reset_game():
+	score = INITIAL_SCORE
+	is_night = false
+	dawn_time = DAWN_TIME
+	day_duration = DAY_DURATION
