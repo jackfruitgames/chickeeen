@@ -1,4 +1,4 @@
-extends Area2D
+extends CharacterBody2D
 
 func _on_body_entered(collided_object):
 	if collided_object.is_in_group("player"):

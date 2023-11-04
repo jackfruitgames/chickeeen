@@ -8,7 +8,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_yhv2n"]
 radius = 16.0
 
-[node name="wolf" type="Area2D"]
+[node name="wolf" type="CharacterBody2D"]
 script = ExtResource("1_8nr5h")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -17,10 +17,9 @@ texture = ExtResource("1_wndap")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_yhv2n")
 
-[node name="movement" type="Node" parent="."]
-script = ExtResource("3_7ieju")
-
 [node name="killOnDay" type="Node" parent="."]
 script = ExtResource("4_5u0x1")
 
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+debug_path_custom_line_width = 10.0
+script = ExtResource("3_7ieju")
