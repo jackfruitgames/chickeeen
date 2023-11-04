@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://80jawqck3m24"]
+[gd_scene load_steps=3 format=3 uid="uid://80jawqck3m24"]
 
+[ext_resource type="Script" path="res://scenes/ui/UpdateLevel.gd" id="2_fv3t8"]
 [ext_resource type="Script" path="res://scenes/ui/UpdateFoodProgress.gd" id="2_vufxw"]
 
 [node name="UILayer" type="CanvasLayer"]
@@ -30,3 +31,12 @@ size_flags_vertical = 1
 value = 50.0
 show_percentage = false
 script = ExtResource("2_vufxw")
+
+[node name="LevelLabel" type="Label" parent="ui/HBoxContainer"]
+layout_mode = 2
+text = "    Level: "
+
+[node name="LevelValueLabel" type="Label" parent="ui/HBoxContainer"]
+layout_mode = 2
+text = "0    "
+script = ExtResource("2_fv3t8")
