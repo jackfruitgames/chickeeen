@@ -11,3 +11,4 @@ func _on_timeout():
 
 	if (GameState.day_duration <= GameState.DAWN_TIME):
 		GameState.dawn_time -= 1
+		GameState.is_dawn = true
