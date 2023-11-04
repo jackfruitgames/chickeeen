@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://baeumj81wsuku"]
+[gd_scene load_steps=13 format=3 uid="uid://baeumj81wsuku"]
 
 [ext_resource type="Texture2D" uid="uid://bdg0up5bmu5eh" path="res://assets/Tilesets/Interior/TilesetInteriorFloor.png" id="1_64b3a"]
 [ext_resource type="Texture2D" uid="uid://b2j2h2ewwc50c" path="res://assets/Tilesets/Interior/TilesetWallSimple.png" id="2_6hes0"]

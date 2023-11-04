@@ -5074,6 +5074,7 @@ script = ExtResource("6_5tcl3")
 [node name="UILayer" parent="." instance=ExtResource("7_e1u4k")]
 
 [node name="NightTimer" type="Timer" parent="."]
+wait_time = 0.1
 autostart = true
 script = ExtResource("8_ar56u")
 
