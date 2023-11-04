@@ -2,6 +2,7 @@ extends Node
 
 # -- game score state
 const INITIAL_SCORE := 50
+const MAX_EATING_SCORE := 100
 var score := INITIAL_SCORE
 var level := 1
 

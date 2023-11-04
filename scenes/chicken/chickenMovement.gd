@@ -3,8 +3,9 @@ extends CharacterBody2D
 const SPEED = 25.0
 
 func _physics_process(delta):
+	var real_speed = SPEED * clamp(GameState.level, 1, 3)
 	var input_direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
-	velocity = input_direction * SPEED
+	velocity = input_direction * real_speed
 	if input_direction != Vector2(0, 0):
 		if !$WalkAudioStreamPlayer2D.playing:
 			$WalkAudioStreamPlayer2D.play()
