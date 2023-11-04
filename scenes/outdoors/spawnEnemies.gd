@@ -1,6 +1,6 @@
 extends Timer
 
-const BASE_NUMBER_OF_ENEMIES := 20
+const BASE_NUMBER_OF_ENEMIES := 5
 
 const MAX_X := 500
 const MAX_Y := 500

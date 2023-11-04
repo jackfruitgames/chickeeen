@@ -10677,7 +10677,7 @@ shape = SubResource("RectangleShape2D_krwh3")
 script = ExtResource("6_5tcl3")
 
 [node name="enemies" type="Timer" parent="."]
-wait_time = 10.0
+wait_time = 30.0
 autostart = true
 script = ExtResource("9_8m8rw")
 
