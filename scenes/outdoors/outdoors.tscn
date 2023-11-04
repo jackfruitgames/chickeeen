@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://7vql1uclie4w"]
+[gd_scene load_steps=28 format=3 uid="uid://7vql1uclie4w"]
 
 [ext_resource type="Texture2D" uid="uid://ciab5ofii7qw6" path="res://assets/Tilesets/TilesetFloor.png" id="1_24wf7"]
 [ext_resource type="Texture2D" uid="uid://ct8ugvaqny2kg" path="res://assets/Tilesets/TilesetWater.png" id="1_oomac"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" path="res://scenes/outdoors/Door.gd" id="6_kxklt"]
 [ext_resource type="PackedScene" uid="uid://80jawqck3m24" path="res://scenes/ui/ui.tscn" id="7_e1u4k"]
 [ext_resource type="Script" path="res://scenes/outdoors/night.gd" id="8_ar56u"]
+[ext_resource type="Script" path="res://scenes/outdoors/spawnEnemies.gd" id="9_8m8rw"]
 [ext_resource type="Script" path="res://scenes/outdoors/dim.gd" id="9_lwkoc"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_v2oef"]
@@ -9951,6 +9952,11 @@ shape = SubResource("RectangleShape2D_krwh3")
 [node name="foods" type="Node2D" parent="."]
 script = ExtResource("6_5tcl3")
 
+[node name="enemies" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
+script = ExtResource("9_8m8rw")
+
 [node name="UILayer" parent="." instance=ExtResource("7_e1u4k")]
 
 [node name="NightTimer" type="Timer" parent="."]
@@ -9978,4 +9984,5 @@ shape = SubResource("SegmentShape2D_6tmml")
 shape = SubResource("SegmentShape2D_hgpt2")
 
 [connection signal="body_entered" from="Door" to="Door" method="_on_body_entered"]
+[connection signal="timeout" from="enemies" to="enemies" method="_on_timeout"]
 [connection signal="timeout" from="NightTimer" to="NightTimer" method="_on_timeout"]

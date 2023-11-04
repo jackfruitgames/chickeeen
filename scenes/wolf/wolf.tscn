@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://d7hhbhwn8gkb"]
+[gd_scene load_steps=6 format=3 uid="uid://d7hhbhwn8gkb"]
 
 [ext_resource type="Script" path="res://scenes/wolf/wolfcollider.gd" id="1_8nr5h"]
 [ext_resource type="Texture2D" uid="uid://d07o2xujcicyj" path="res://scenes/wolf/fakeWolf.png" id="1_wndap"]
+[ext_resource type="Script" path="res://scenes/wolf/movement.gd" id="3_7ieju"]
+[ext_resource type="Script" path="res://scenes/wolf/killOnDay.gd" id="4_5u0x1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yhv2n"]
 radius = 16.0
@@ -14,5 +16,11 @@ texture = ExtResource("1_wndap")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_yhv2n")
+
+[node name="movement" type="Node" parent="."]
+script = ExtResource("3_7ieju")
+
+[node name="killOnDay" type="Node" parent="."]
+script = ExtResource("4_5u0x1")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
