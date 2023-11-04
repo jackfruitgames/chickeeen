@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://80jawqck3m24"]
+[gd_scene load_steps=4 format=3 uid="uid://80jawqck3m24"]
 
+[ext_resource type="LabelSettings" uid="uid://b3dnwdl6xc1h6" path="res://scenes/ui/uiLabelStyle.tres" id="1_5dksh"]
 [ext_resource type="Script" path="res://scenes/ui/UpdateLevel.gd" id="2_fv3t8"]
 [ext_resource type="Script" path="res://scenes/ui/UpdateFoodProgress.gd" id="2_vufxw"]
 
@@ -23,6 +24,7 @@ grow_horizontal = 2
 [node name="FoodLabel" type="Label" parent="ui/HBoxContainer"]
 layout_mode = 2
 text = "      Food: "
+label_settings = ExtResource("1_5dksh")
 
 [node name="ProgressBar" type="ProgressBar" parent="ui/HBoxContainer"]
 layout_mode = 2
@@ -35,8 +37,10 @@ script = ExtResource("2_vufxw")
 [node name="LevelLabel" type="Label" parent="ui/HBoxContainer"]
 layout_mode = 2
 text = "    Level: "
+label_settings = ExtResource("1_5dksh")
 
 [node name="LevelValueLabel" type="Label" parent="ui/HBoxContainer"]
 layout_mode = 2
 text = "0    "
+label_settings = ExtResource("1_5dksh")
 script = ExtResource("2_fv3t8")
