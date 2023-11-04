@@ -1,6 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://dhndmuv1touhp"]
+[gd_scene load_steps=4 format=3 uid="uid://dhndmuv1touhp"]
 
 [ext_resource type="Script" path="res://scenes/gameover/restartGame.gd" id="1_wv5se"]
+
+[sub_resource type="Gradient" id="Gradient_aq8mq"]
+offsets = PackedFloat32Array(0, 0.595078)
+colors = PackedColorArray(0, 0, 0, 1, 1, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_gks2f"]
+gradient = SubResource("Gradient_aq8mq")
+fill = 1
+fill_from = Vector2(0.491453, 0.465812)
 
 [node name="gameover" type="Node2D"]
 
@@ -39,5 +48,9 @@ layout_mode = 2
 size_flags_horizontal = 4
 text = "    Restart    "
 script = ExtResource("1_wv5se")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(121.96, 112.76)
+texture = SubResource("GradientTexture2D_gks2f")
 
 [connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/Button" to="CanvasLayer/Control/VBoxContainer/Button" method="_on_pressed"]
