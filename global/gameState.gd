@@ -7,6 +7,12 @@ var score := INITIAL_SCORE
 var level := 1
 var eggs := 0
 
+# -- chicken features
+var has_torch := false
+var has_speaker := false
+var has_stick := false
+var has_shotgun := false
+
 # -- game daytime state
 const TIME_FACTOR = 1/0.1
 const DAY_DURATION := 60 * 1 * TIME_FACTOR  # seconds
