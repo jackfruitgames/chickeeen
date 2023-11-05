@@ -1,6 +1,6 @@
 extends Area2D
 
-const FOOD_FACTOR_PER_CORN = 40
+const FOOD_FACTOR_PER_CORN = 10
 
 func _on_body_entered(collided_object):
 	if collided_object.is_in_group("player"):
