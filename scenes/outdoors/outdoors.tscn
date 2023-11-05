@@ -9996,10 +9996,10 @@ collision_mask = 11
 
 [node name="Camera2D" type="Camera2D" parent="chicken"]
 zoom = Vector2(4, 4)
-limit_left = -500
-limit_top = -500
-limit_right = 1500
-limit_bottom = 1000
+limit_left = -1250
+limit_top = -1250
+limit_right = 2250
+limit_bottom = 1400
 limit_smoothed = true
 position_smoothing_enabled = true
 
