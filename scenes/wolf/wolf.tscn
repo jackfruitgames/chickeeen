@@ -5,10 +5,6 @@
 [ext_resource type="Script" path="res://scenes/wolf/movement.gd" id="3_7ieju"]
 [ext_resource type="Script" path="res://scenes/wolf/killOnDay.gd" id="4_5u0x1"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q5wqx"]
-radius = 5.0
-height = 38.0
-
 [sub_resource type="Gradient" id="Gradient_l6dnh"]
 offsets = PackedFloat32Array(0, 0.012766, 1)
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1)
@@ -21,9 +17,24 @@ fill = 1
 fill_from = Vector2(0.525641, 0.508547)
 fill_to = Vector2(0.807692, 0.179487)
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q5wqx"]
+radius = 5.0
+height = 38.0
+
 [node name="wolf" type="CharacterBody2D" groups=["wolf"]]
 collision_layer = 19
 collision_mask = 19
+
+[node name="PointLight2DLeft" type="PointLight2D" parent="."]
+visible = false
+position = Vector2(-13, -2)
+color = Color(1, 0.2, 0.243137, 1)
+texture = SubResource("GradientTexture2D_ijiim")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(13, -2)
+color = Color(1, 0.2, 0.243137, 1)
+texture = SubResource("GradientTexture2D_ijiim")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
@@ -42,8 +53,3 @@ script = ExtResource("4_5u0x1")
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 debug_path_custom_line_width = 10.0
 script = ExtResource("3_7ieju")
-
-[node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(14, -2)
-color = Color(1, 0.2, 0.243137, 1)
-texture = SubResource("GradientTexture2D_ijiim")
