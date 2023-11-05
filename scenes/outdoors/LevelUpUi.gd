@@ -4,7 +4,9 @@ var level_up_features := [
 	"increase speed",
 	"more speed",
 	"ultra speed",
-	"unlock sprint [space]",
+	"unlock sprint [space]",\
+	"sprint faster [space]",
+	"sprint ULTRAFAST [space]"
 ]
 
 
