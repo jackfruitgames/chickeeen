@@ -7,7 +7,8 @@ var level_up_features := [
 	"unlock sprint [space]",
 ]
 
-func _process(delta):
+
+func _process(_delta:float):
 	if GameState.level_up:
 		GameState.level_up = false
 		get_tree().paused = true

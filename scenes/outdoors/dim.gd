@@ -1,6 +1,6 @@
 extends CanvasModulate
 
-func _process(delta):
+func _process(_delta:float):
 	var night_progress = float(GameState.dawn_time) / float(GameState.DAWN_TIME)
 	if GameState.is_night:
 		night_progress = 1 - night_progress

@@ -1,5 +1,4 @@
 extends Label
 
-func _process(delta):
-	# spaces are a hacky way for padding. TODO: Find a better solution :)
+func _process(_delta:float):
 	text = str(GameState.level)

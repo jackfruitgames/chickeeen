@@ -1,8 +1,8 @@
 extends ProgressBar
 
-func _process(delta):
+func _process(_delta:float):
 	value = GameState.score
-	
+
 	if value <= 20:
 		var sb = StyleBoxFlat.new()
 		add_theme_stylebox_override("fill", sb)

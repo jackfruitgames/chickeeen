@@ -5,8 +5,5 @@ func _ready():
 	$AnimationPlayer.play("lantern_swing")
 
 
-func _process(delta):
-	if GameState.has_torch && GameState.is_dawn:
-		visible = true
-	else:
-		visible = false
+func _process(_delta:float):
+	visible = GameState.has_torch && GameState.is_dawn

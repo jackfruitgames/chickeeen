@@ -1,5 +1,5 @@
 extends Label
 
 
-func _process(delta):
+func _process(_delta:float):
 	text = str(GameState.eggs)
