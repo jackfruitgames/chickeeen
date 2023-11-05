@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://80jawqck3m24"]
 
-[ext_resource type="LabelSettings" path="res://scenes/ui/uiLabelStyle.tres" id="1_5dksh"]
+[ext_resource type="LabelSettings" uid="uid://b3dnwdl6xc1h6" path="res://scenes/ui/uiLabelStyle.tres" id="1_5dksh"]
 [ext_resource type="Script" path="res://scenes/ui/UpdateLevel.gd" id="2_fv3t8"]
 [ext_resource type="Script" path="res://scenes/ui/UpdateFoodProgress.gd" id="2_vufxw"]
 [ext_resource type="Script" path="res://scenes/ui/updateEggsValue.gd" id="4_6nopd"]

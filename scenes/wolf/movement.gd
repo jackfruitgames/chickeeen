@@ -1,6 +1,8 @@
 extends NavigationAgent2D
 
-const SPEED := 900
+var rng = RandomNumberGenerator.new()
+
+const SPEED := 2000
 const REACH_DISTANCE = 200
 
 var player = null
@@ -22,6 +24,6 @@ func _physics_process(delta):
 			var next_direction = get_next_path_position()
 			var current_enemy_position = wolf.global_position
 			var target_direction = (next_direction - current_enemy_position).normalized()
-			wolf.velocity = target_direction * (SPEED * delta)
+			wolf.velocity = target_direction * ((SPEED + rng.randi_range(100, 2000)) * delta)
 			get_parent().get_node("Sprite2D").flip_h = target_direction.x < 0
 			wolf.move_and_slide()
