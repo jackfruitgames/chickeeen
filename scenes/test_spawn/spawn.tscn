@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cg0md1atbrh5w"]
+
+[ext_resource type="Script" path="res://scenes/test_spawn/spawn.gd" id="1_5857c"]
+
+[sub_resource type="Gradient" id="Gradient_17pw5"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_do16t"]
+gradient = SubResource("Gradient_17pw5")
+fill_from = Vector2(1, 0)
+
+[node name="spawn" type="Node2D"]
+script = ExtResource("1_5857c")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-3, 3)
+zoom = Vector2(0.5, 0.5)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(21.0001, 38.25)
+scale = Vector2(38.0625, 22.4297)
+texture = SubResource("GradientTexture2D_do16t")

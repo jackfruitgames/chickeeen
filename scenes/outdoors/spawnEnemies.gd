@@ -10,35 +10,20 @@ const MAX_Y := 500
 const WATER_TILE_TERRAIN := 2
 const WOLF := preload("res://scenes/wolf/wolf.tscn")
 
-const TOP_LEFT := Vector2(-150, -50)
-const BOTTOM_RIGHT := Vector2(550, 500)
-
+const CENTER = Vector2(200, 200)
 
 func area_aware_position() -> Vector2:
-	var pos_x = rng.randi_range(TOP_LEFT.x, BOTTOM_RIGHT.x)
-	var pos_y = rng.randi_range(TOP_LEFT.y, BOTTOM_RIGHT.y)
+	var pos_y = 1000.0 - abs(rng.randfn(0.0, 500.0))
+	var pos_x = 1400.0 - abs(rng.randfn(0.0, 700.0))
 	
-	var area = rng.randi_range(0, 10)
+	if rng.randi_range(0, 1) == 0:
+		pos_x *= -1
+#
+	if rng.randi_range(0, 1) == 0:
+		pos_y *= -1
 	
-	if area >= 2:
-		var offset_x = rng.randi_range(0, 300)
-		var offset_y = rng.randi_range(0, 300)
-		
-		if area > 5:
-			offset_x = rng.randi_range(300, 600)
-			offset_y = rng.randi_range(300, 600)
-		
-		if pos_x > 0:
-			pos_x += offset_x
-		else:
-			pos_x -= offset_x
-			
-		if pos_y > 0:	
-			pos_y += offset_y
-		else:
-			pos_y -= offset_y
+	return Vector2(pos_x, pos_y) + CENTER
 	
-	return Vector2(pos_x, pos_y)
 func get_valid_position() -> Vector2:
 	var vec = area_aware_position()
 	
