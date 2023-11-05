@@ -8,6 +8,7 @@ var level := 1
 var eggs := 0
 var is_in_water := false
 var level_up := false
+var ammo := 0
 
 # -- chicken features
 var has_torch := false

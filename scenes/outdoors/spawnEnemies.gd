@@ -41,7 +41,10 @@ func get_valid_position() -> Vector2:
 		var data = map.get_cell_tile_data(0, tile)
 		
 		vec = area_aware_position()
-	
+		
+		if !data:
+			continue
+		
 		if data.terrain == WATER_TILE_TERRAIN:
 			continue  # don't spawn wolf on water
 			
