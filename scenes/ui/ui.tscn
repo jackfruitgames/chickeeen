@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://80jawqck3m24"]
 
-[ext_resource type="LabelSettings" path="res://scenes/ui/uiLabelStyle.tres" id="1_5dksh"]
+[ext_resource type="LabelSettings" uid="uid://b3dnwdl6xc1h6" path="res://scenes/ui/uiLabelStyle.tres" id="1_5dksh"]
 [ext_resource type="Script" path="res://scenes/ui/UpdateLevel.gd" id="2_fv3t8"]
 [ext_resource type="Script" path="res://scenes/ui/UpdateFoodProgress.gd" id="2_vufxw"]
 [ext_resource type="Script" path="res://scenes/ui/updateEggsValue.gd" id="4_6nopd"]
@@ -18,7 +18,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="ui"]
+[node name="TopBarContainer" type="HBoxContainer" parent="ui"]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -28,12 +28,12 @@ offset_right = -40.0
 offset_bottom = 42.0
 grow_horizontal = 2
 
-[node name="FoodLabel" type="Label" parent="ui/HBoxContainer"]
+[node name="FoodLabel" type="Label" parent="ui/TopBarContainer"]
 layout_mode = 2
 text = "Food 🌽: "
 label_settings = ExtResource("1_5dksh")
 
-[node name="ProgressBar" type="ProgressBar" parent="ui/HBoxContainer"]
+[node name="ProgressBar" type="ProgressBar" parent="ui/TopBarContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
@@ -41,53 +41,59 @@ value = 50.0
 show_percentage = false
 script = ExtResource("2_vufxw")
 
-[node name="LevelLabel" type="Label" parent="ui/HBoxContainer"]
+[node name="LevelLabel" type="Label" parent="ui/TopBarContainer"]
 layout_mode = 2
 text = "    Level 🐣: "
 label_settings = ExtResource("1_5dksh")
 
-[node name="LevelValueLabel" type="Label" parent="ui/HBoxContainer"]
+[node name="LevelValueLabel" type="Label" parent="ui/TopBarContainer"]
 layout_mode = 2
 text = "0"
 label_settings = ExtResource("1_5dksh")
 script = ExtResource("2_fv3t8")
 
-[node name="SpacerLabel" type="Label" parent="ui/HBoxContainer"]
+[node name="SpacerLabel" type="Label" parent="ui/TopBarContainer"]
 layout_mode = 2
 text = "    "
 label_settings = ExtResource("1_5dksh")
 
-[node name="EggsLabel" type="Label" parent="ui/HBoxContainer"]
+[node name="EggsLabel" type="Label" parent="ui/TopBarContainer"]
 layout_mode = 2
 text = "Eggs 🥚: "
 label_settings = ExtResource("1_5dksh")
 
-[node name="EggsValueLabel" type="Label" parent="ui/HBoxContainer"]
+[node name="EggsValueLabel" type="Label" parent="ui/TopBarContainer"]
 layout_mode = 2
 text = "0    "
 label_settings = ExtResource("1_5dksh")
 script = ExtResource("4_6nopd")
 
-[node name="ItemsContainer" type="HBoxContainer" parent="ui"]
-layout_mode = 2
-offset_left = 60.0
-offset_top = 594.0
-offset_right = 138.0
-offset_bottom = 631.0
+[node name="BottomBarContainer" type="HBoxContainer" parent="ui"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = -48.0
+offset_right = -12.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 0
 script = ExtResource("5_12uv2")
 
-[node name="Swimmer" type="Sprite2D" parent="ui/ItemsContainer"]
+[node name="Label" type="Label" parent="ui/BottomBarContainer"]
+layout_mode = 2
+text = "Items 📦: "
+label_settings = ExtResource("1_5dksh")
+
+[node name="Swimmer" type="Sprite2D" parent="ui/BottomBarContainer"]
 visible = false
 position = Vector2(261, 18)
 texture = ExtResource("5_tgaps")
 
-[node name="Lantern" type="Sprite2D" parent="ui/ItemsContainer"]
+[node name="Lantern" type="Sprite2D" parent="ui/BottomBarContainer"]
 visible = false
 position = Vector2(166, 18)
 scale = Vector2(4.25, 4.25)
 texture = ExtResource("6_f3ejk")
-
-[node name="Label" type="Label" parent="ui/ItemsContainer"]
-layout_mode = 2
-text = "Items 📦: "
-label_settings = ExtResource("1_5dksh")
