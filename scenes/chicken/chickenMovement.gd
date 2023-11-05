@@ -51,6 +51,7 @@ func _physics_process(delta: float):
 		sprinting = true
 		original_speed = speed
 		speed = speed * ((clamp(GameState.level, 4, 6) - 2) * 0.5)
+		$ChickeeenAudioStreamPlayer2D.play()
 		$AnimationPlayer.stop()
 		$AnimationPlayer.play("backflip")
 		$SprintTimer.start()

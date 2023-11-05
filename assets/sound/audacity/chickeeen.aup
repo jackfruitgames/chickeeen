@@ -1,31 +1,25 @@
 <?xml version="1.0" standalone="no" ?>
 <!DOCTYPE project PUBLIC "-//audacityproject-1.3.0//DTD//EN" "http://audacity.sourceforge.net/xml/audacityproject-1.3.0.dtd" >
-<project xmlns="http://audacity.sourceforge.net/xml/" projname="chickeeen_data" version="1.3.0" audacityversion="2.2.2" sel0="0.0000000000" sel1="0.4527891156" vpos="48" h="0.0000000000" zoom="86.1328125000" rate="44100.0" snapto="off" selectionformat="hh:mm:ss + milliseconds" frequencyformat="Hz" bandwidthformat="octaves">
+<project xmlns="http://audacity.sourceforge.net/xml/" projname="chickeeen_data" version="1.3.0" audacityversion="2.2.2" sel0="0.0000000000" sel1="0.0000000000" vpos="80" h="0.0000000000" zoom="86.1328125000" rate="44100.0" snapto="off" selectionformat="hh:mm:ss + milliseconds" frequencyformat="Hz" bandwidthformat="octaves">
 	<tags>
 		<tag name="ARTIST" value="eddex"/>
 		<tag name="YEAR" value="2023"/>
 	</tags>
-	<wavetrack name="chicken_sprint" channel="0" linked="1" mute="1" solo="0" height="150" minimized="1" isSelected="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+	<wavetrack name="chicken_sprint" channel="0" linked="1" mute="1" solo="0" height="150" minimized="0" isSelected="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
 		<waveclip offset="0.00000000" colorindex="0">
-			<sequence maxsamples="262144" sampleformat="262159" numsamples="123055">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="61952">
 				<waveblock start="0">
-					<simpleblockfile filename="e0808586.au" len="16384" min="-0.000519" max="0.000519" rms="0.000081"/>
-				</waveblock>
-				<waveblock start="16384">
-					<simpleblockfile filename="e0808f3a.au" len="106671" min="-0.995585" max="0.852792" rms="0.227803"/>
+					<simpleblockfile filename="e0808e5e.au" len="61952" min="-0.995585" max="0.852792" rms="0.298919"/>
 				</waveblock>
 			</sequence>
 			<envelope numpoints="0"/>
 		</waveclip>
 	</wavetrack>
-	<wavetrack name="chicken_sprint" channel="1" linked="0" mute="1" solo="0" height="150" minimized="1" isSelected="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+	<wavetrack name="chicken_sprint" channel="1" linked="0" mute="1" solo="0" height="150" minimized="0" isSelected="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
 		<waveclip offset="0.00000000" colorindex="0">
-			<sequence maxsamples="262144" sampleformat="262159" numsamples="123055">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="61952">
 				<waveblock start="0">
-					<simpleblockfile filename="e080822e.au" len="16384" min="-0.000427" max="0.000458" rms="0.000085"/>
-				</waveblock>
-				<waveblock start="16384">
-					<simpleblockfile filename="e0808043.au" len="106671" min="-0.772199" max="0.926829" rms="0.189753"/>
+					<simpleblockfile filename="e0808258.au" len="61952" min="-0.772199" max="0.926829" rms="0.248991"/>
 				</waveblock>
 			</sequence>
 			<envelope numpoints="0"/>
@@ -187,43 +181,27 @@
 			<envelope numpoints="0"/>
 		</waveclip>
 	</wavetrack>
-	<wavetrack name="Audio Track" channel="0" linked="1" mute="1" solo="0" height="150" minimized="0" isSelected="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+	<wavetrack name="Audio Track" channel="0" linked="1" mute="0" solo="1" height="150" minimized="0" isSelected="1" rate="44100" gain="4.466836" pan="0.0" colorindex="0">
 		<waveclip offset="-0.13000000" colorindex="0">
-			<sequence maxsamples="262144" sampleformat="262159" numsamples="5733">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="57957">
 				<waveblock start="0">
-					<simpleblockfile filename="e0808a67.au" len="5733" min="-0.000031" max="0.000031" rms="0.000015"/>
-				</waveblock>
-			</sequence>
-			<envelope numpoints="0"/>
-		</waveclip>
-		<waveclip offset="0.00000000" colorindex="0">
-			<sequence maxsamples="262144" sampleformat="262159" numsamples="52224">
-				<waveblock start="0">
-					<simpleblockfile filename="e0808012.au" len="52224" min="-0.651894" max="0.707336" rms="0.14972"/>
+					<simpleblockfile filename="e080832c.au" len="57957" min="-0.651894" max="0.707336" rms="0.142122"/>
 				</waveblock>
 			</sequence>
 			<envelope numpoints="0"/>
 		</waveclip>
 	</wavetrack>
-	<wavetrack name="Audio Track" channel="1" linked="0" mute="1" solo="0" height="150" minimized="0" isSelected="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+	<wavetrack name="Audio Track" channel="1" linked="0" mute="0" solo="1" height="150" minimized="0" isSelected="1" rate="44100" gain="4.466836" pan="0.0" colorindex="0">
 		<waveclip offset="-0.13000000" colorindex="0">
-			<sequence maxsamples="262144" sampleformat="262159" numsamples="5733">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="57957">
 				<waveblock start="0">
-					<simpleblockfile filename="e080831c.au" len="5733" min="-0.000031" max="0.000031" rms="0.000015"/>
-				</waveblock>
-			</sequence>
-			<envelope numpoints="0"/>
-		</waveclip>
-		<waveclip offset="0.00000000" colorindex="0">
-			<sequence maxsamples="262144" sampleformat="262159" numsamples="52224">
-				<waveblock start="0">
-					<simpleblockfile filename="e0808a65.au" len="52224" min="-0.514218" max="0.671664" rms="0.130182"/>
+					<simpleblockfile filename="e0808550.au" len="57957" min="-0.514218" max="0.671664" rms="0.123576"/>
 				</waveblock>
 			</sequence>
 			<envelope numpoints="0"/>
 		</waveclip>
 	</wavetrack>
-	<wavetrack name="chicken_walk1" channel="0" linked="1" mute="0" solo="1" height="150" minimized="0" isSelected="1" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+	<wavetrack name="chicken_walk1" channel="0" linked="1" mute="1" solo="0" height="150" minimized="0" isSelected="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
 		<waveclip offset="0.00000000" colorindex="0">
 			<sequence maxsamples="262144" sampleformat="262159" numsamples="19968">
 				<waveblock start="0">
@@ -233,7 +211,7 @@
 			<envelope numpoints="0"/>
 		</waveclip>
 	</wavetrack>
-	<wavetrack name="chicken_walk1" channel="1" linked="0" mute="0" solo="1" height="150" minimized="0" isSelected="1" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+	<wavetrack name="chicken_walk1" channel="1" linked="0" mute="1" solo="0" height="150" minimized="0" isSelected="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
 		<waveclip offset="0.00000000" colorindex="0">
 			<sequence maxsamples="262144" sampleformat="262159" numsamples="19968">
 				<waveblock start="0">
