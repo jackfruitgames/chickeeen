@@ -14,6 +14,9 @@ func _ready():
 
 func _process(delta):
 	var map: TileMap = $%Map
+	if !map:
+		return
+		
 	var tile := map.local_to_map(get_position())
 	var data = map.get_cell_tile_data(0, tile)
 	
@@ -40,7 +43,7 @@ func _physics_process(delta):
 		if !$WalkAudioStreamPlayer2D.playing:
 			$WalkAudioStreamPlayer2D.play()
 		$Sprite2D.flip_h = input_direction.x < 0
-		$Sprite2D/Swimmer.flip_h = input_direction.x > 0
+		$Sprite2D/Swimmer.flip_h = !$Sprite2D.flip_h
 		
 	# sprint
 	if Input.is_action_just_pressed("sprint") && !sprinting && GameState.has_sprint:

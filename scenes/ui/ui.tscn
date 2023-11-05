@@ -1,9 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://80jawqck3m24"]
+[gd_scene load_steps=8 format=3 uid="uid://80jawqck3m24"]
 
 [ext_resource type="LabelSettings" path="res://scenes/ui/uiLabelStyle.tres" id="1_5dksh"]
 [ext_resource type="Script" path="res://scenes/ui/UpdateLevel.gd" id="2_fv3t8"]
 [ext_resource type="Script" path="res://scenes/ui/UpdateFoodProgress.gd" id="2_vufxw"]
 [ext_resource type="Script" path="res://scenes/ui/updateEggsValue.gd" id="4_6nopd"]
+[ext_resource type="Script" path="res://scenes/ui/ItemsContainer.gd" id="5_12uv2"]
+[ext_resource type="Texture2D" uid="uid://dsql2g8oifqsk" path="res://assets/chicken/swimmer.png" id="5_tgaps"]
+[ext_resource type="Texture2D" uid="uid://cgp8fj3gmmdnk" path="res://assets/Latern/Latern-black.png" id="6_f3ejk"]
 
 [node name="UILayer" type="CanvasLayer"]
 
@@ -64,3 +67,27 @@ layout_mode = 2
 text = "0    "
 label_settings = ExtResource("1_5dksh")
 script = ExtResource("4_6nopd")
+
+[node name="ItemsContainer" type="HBoxContainer" parent="ui"]
+layout_mode = 2
+offset_left = 60.0
+offset_top = 594.0
+offset_right = 138.0
+offset_bottom = 631.0
+script = ExtResource("5_12uv2")
+
+[node name="Swimmer" type="Sprite2D" parent="ui/ItemsContainer"]
+visible = false
+position = Vector2(198, 16)
+texture = ExtResource("5_tgaps")
+
+[node name="Lantern" type="Sprite2D" parent="ui/ItemsContainer"]
+visible = false
+position = Vector2(123, 16)
+scale = Vector2(4.25, 4.25)
+texture = ExtResource("6_f3ejk")
+
+[node name="Label" type="Label" parent="ui/ItemsContainer"]
+layout_mode = 2
+text = "Items: "
+label_settings = ExtResource("1_5dksh")
