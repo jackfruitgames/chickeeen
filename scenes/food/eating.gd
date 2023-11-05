@@ -9,8 +9,7 @@ func _on_body_entered(collided_object):
 		$EatAudioStreamPlayer2D.play()
 
 		if (GameState.score > GameState.MAX_EATING_SCORE):
-			GameState.level += 1
-			GameState.score = GameState.INITIAL_SCORE
+			GameState.level_up = true
 
 		if GameState.level > 3:
 			GameState.has_sprint = true

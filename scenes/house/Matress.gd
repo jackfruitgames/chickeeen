@@ -5,12 +5,7 @@ var night_skipped := false
 
 func _process(delta):
 	if chicken_is_on_matress:
-		if Input.is_action_just_pressed("lay_egg"):
-			if GameState.score >= 40:
-				GameState.eggs += 1
-				GameState.score -= 25
-		elif Input.is_action_just_pressed("sleep") && !night_skipped:
-			print("sleep")
+		if Input.is_action_just_pressed("sleep") && !night_skipped:
 			GameState.score -= 10
 			night_skipped = true
 			GameState.skip_night()

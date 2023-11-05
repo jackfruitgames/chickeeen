@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://7vql1uclie4w"]
+[gd_scene load_steps=44 format=3 uid="uid://7vql1uclie4w"]
 
 [ext_resource type="Texture2D" uid="uid://ciab5ofii7qw6" path="res://assets/Tilesets/TilesetFloor.png" id="1_24wf7"]
 [ext_resource type="Texture2D" uid="uid://ct8ugvaqny2kg" path="res://assets/Tilesets/TilesetWater.png" id="1_oomac"]
@@ -18,6 +18,7 @@
 [ext_resource type="Script" path="res://scenes/house/torch.gd" id="16_l53a0"]
 [ext_resource type="Script" path="res://scenes/outdoors/Swimmy.gd" id="17_kcbg8"]
 [ext_resource type="Texture2D" uid="uid://dsql2g8oifqsk" path="res://assets/chicken/swimmer.png" id="17_vy834"]
+[ext_resource type="Script" path="res://scenes/outdoors/LevelUpUi.gd" id="19_q2tmb"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_v2oef"]
 tile_data = PackedInt32Array(327680, 393219, 0, 327681, 393219, 0, 327682, 393219, 0, 393218, 131075, 0, 327683, 131075, 0, 393219, 131075, 0, 4, 131075, 0, 65540, 131075, 0, 131076, 131075, 0, 262148, 131075, 0, 393220, 131075, 0, 65541, 131075, 0, 131077, 131075, 0, 196613, 131075, 0, 262149, 131075, 0, 327685, 131075, 0, 196614, 131075, 0, 262150, 131075, 0, 327686, 131075, 0, 65543, 131075, 0, 131079, 131075, 0, 196615, 131075, 0, 262151, 131075, 0, 327687, 131075, 0, 8, 131075, 0, 65544, 131075, 0, 131080, 131075, 0, 196616, 131075, 0, 262152, 131075, 0, 65545, 131075, 0, 196617, 131075, 0, 131082, 131075, 0, 131083, 131075, 0, 196620, 131075, 0)
@@ -9955,6 +9956,20 @@ fill_from = Vector2(0.525641, 0.521368)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xrax8"]
 size = Vector2(54.3997, 31.7333)
 
+[sub_resource type="Theme" id="Theme_n1xc6"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vyu0y"]
+font_size = 34
+font_color = Color(0.917647, 0.870588, 0.372549, 1)
+outline_size = 6
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_vc7l2"]
+font_size = 28
+font_color = Color(1, 0.819608, 0.568627, 1)
+outline_size = 6
+outline_color = Color(0, 0, 0, 1)
+
 [node name="outdoors" type="Node2D"]
 
 [node name="Map" type="TileMap" parent="."]
@@ -10061,6 +10076,7 @@ E: Confirm"
 horizontal_alignment = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+process_mode = 3
 stream = ExtResource("15_445im")
 volume_db = -20.0
 autoplay = true
@@ -10085,9 +10101,91 @@ shape = SubResource("RectangleShape2D_xrax8")
 [node name="Swimmer" type="Sprite2D" parent="Swimmy"]
 texture = ExtResource("17_vy834")
 
+[node name="LevelUpUi" type="CanvasLayer" parent="."]
+process_mode = 3
+visible = false
+script = ExtResource("19_q2tmb")
+
+[node name="ColorRect" type="ColorRect" parent="LevelUpUi"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 200.0
+offset_top = 200.0
+offset_right = -200.0
+offset_bottom = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_n1xc6")
+color = Color(0.760784, 0.513726, 0.25098, 1)
+
+[node name="Title" type="Label" parent="LevelUpUi/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+offset_top = 10.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "You are full!"
+label_settings = SubResource("LabelSettings_vyu0y")
+horizontal_alignment = 1
+
+[node name="Description" type="Label" parent="LevelUpUi/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+offset_top = 60.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "Do you want to increase your level or lay an egg?"
+label_settings = SubResource("LabelSettings_vc7l2")
+horizontal_alignment = 1
+
+[node name="LevelUpDetails" type="Label" parent="LevelUpUi/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+offset_top = 100.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "Level Up: increased speed"
+label_settings = SubResource("LabelSettings_vc7l2")
+horizontal_alignment = 1
+
+[node name="LevelUpButton" type="Button" parent="LevelUpUi/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 60.0
+offset_top = -91.0
+offset_right = 349.0
+offset_bottom = -35.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 24
+text = "Level Up!"
+
+[node name="LayEggButton" type="Button" parent="LevelUpUi/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -350.0
+offset_top = -91.0
+offset_right = -60.0
+offset_bottom = -35.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 24
+text = "Lay Egg!"
+
 [connection signal="body_entered" from="Door" to="Door" method="_on_body_entered"]
 [connection signal="timeout" from="enemies" to="enemies" method="_on_timeout"]
 [connection signal="timeout" from="NightTimer" to="NightTimer" method="_on_timeout"]
 [connection signal="body_entered" from="Vendor 1" to="Vendor 1" method="_on_body_entered"]
 [connection signal="body_exited" from="Vendor 1" to="Vendor 1" method="_on_body_exited"]
 [connection signal="body_entered" from="Swimmy" to="Swimmy" method="_on_body_entered"]
+[connection signal="pressed" from="LevelUpUi/ColorRect/LevelUpButton" to="LevelUpUi" method="_on_level_up_button_pressed"]
+[connection signal="pressed" from="LevelUpUi/ColorRect/LayEggButton" to="LevelUpUi" method="_on_lay_egg_button_pressed"]
