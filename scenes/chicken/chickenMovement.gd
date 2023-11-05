@@ -40,6 +40,7 @@ func _physics_process(delta):
 		if !$WalkAudioStreamPlayer2D.playing:
 			$WalkAudioStreamPlayer2D.play()
 		$Sprite2D.flip_h = input_direction.x < 0
+		$Sprite2D/Swimmer.flip_h = input_direction.x > 0
 		
 	# sprint
 	if Input.is_action_just_pressed("sprint") && !sprinting && GameState.has_sprint:
