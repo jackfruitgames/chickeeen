@@ -1,13 +1,11 @@
-[gd_scene load_steps=31 format=3 uid="uid://cs8d3sukjl1q7"]
+[gd_scene load_steps=33 format=3 uid="uid://cs8d3sukjl1q7"]
 
 [ext_resource type="Script" path="res://scenes/chicken/chickenMovement.gd" id="1_idpav"]
-[ext_resource type="Texture2D" uid="uid://ck8icr1crrqxw" path="res://scenes/chicken/Chicken-0001.png" id="2_oiiyn"]
+[ext_resource type="Texture2D" uid="uid://b8bfkowu0j6o2" path="res://scenes/chicken/Chicken-0002.png" id="2_qwtd8"]
 [ext_resource type="Script" path="res://scenes/chicken/chickenCluck.gd" id="3_f7rxb"]
-[ext_resource type="AudioStream" uid="uid://j23lpail1p57" path="res://assets/sound/chicken_cluck0.mp3" id="3_ooivu"]
-[ext_resource type="Texture2D" uid="uid://dsql2g8oifqsk" path="res://assets/chicken/swimmer.png" id="3_ws6fq"]
-[ext_resource type="Script" path="res://scenes/chicken/Swimmer.gd" id="4_2mfwn"]
-[ext_resource type="AudioStream" uid="uid://bthyencc6mu0g" path="res://assets/sound/chicken_cluck1.mp3" id="4_qrlbq"]
-[ext_resource type="AudioStream" uid="uid://bsxikwto3kcak" path="res://assets/sound/chicken_cluck2.mp3" id="5_k10mf"]
+[ext_resource type="AudioStream" uid="uid://di4jrrk0qowdi" path="res://assets/sound/chicken_cluck0.mp3" id="3_ooivu"]
+[ext_resource type="AudioStream" uid="uid://bki1yaw285bf0" path="res://assets/sound/chicken_cluck1.mp3" id="4_qrlbq"]
+[ext_resource type="AudioStream" uid="uid://dswqsbnusk0ip" path="res://assets/sound/chicken_cluck2.mp3" id="5_k10mf"]
 [ext_resource type="AudioStream" uid="uid://dq26sc2hlncpn" path="res://assets/sound/chicken_walk0.mp3" id="7_g0jjt"]
 [ext_resource type="AudioStream" uid="uid://8cuo3c0ep8rr" path="res://assets/sound/chicken_walk1.mp3" id="8_nvlb5"]
 [ext_resource type="AudioStream" uid="uid://vcmji10sdmur" path="res://assets/sound/chicken_walk2.mp3" id="9_jcdfi"]
@@ -54,6 +52,205 @@ tracks/0/keys = {
 _data = {
 "RESET": SubResource("Animation_f51qs"),
 "lantern_swing": SubResource("Animation_6qd0x")
+}
+
+[sub_resource type="Animation" id="Animation_py8d4"]
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_qwtd8")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = false
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = false
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = false
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_atdhk"]
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_qwtd8")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = false
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = false
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = false
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [6, 6]
+}
+
+[sub_resource type="Animation" id="Animation_urle4"]
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_qwtd8")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = false
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = false
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = false
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 2, 3, 4, 5]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cq3gu"]
+_data = {
+"Idle": SubResource("Animation_py8d4"),
+"Swimming": SubResource("Animation_atdhk"),
+"Walking": SubResource("Animation_urle4")
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6jixd"]
@@ -174,19 +371,19 @@ script = ExtResource("1_idpav")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-texture = ExtResource("2_oiiyn")
-
-[node name="Swimmer" type="Sprite2D" parent="Sprite2D"]
-visible = false
-position = Vector2(2, 8)
-scale = Vector2(0.415005, 0.371543)
-texture = ExtResource("3_ws6fq")
-flip_h = true
-script = ExtResource("4_2mfwn")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D/Swimmer"]
-libraries = {
-"": SubResource("AnimationLibrary_4wrf8")
+texture = ExtResource("2_qwtd8")
+hframes = 3
+vframes = 3
+metadata/_aseprite_wizard_config_ = {
+"keep_anim_length": false,
+"layer": "",
+"o_ex_p": "",
+"o_folder": "res://scenes/chicken",
+"o_name": "",
+"only_visible": false,
+"op_exp": false,
+"player": "Sprite2D/AnimationPlayer",
+"source": "res://assets/chicken/Chicken-0002.aseprite"
 }
 
 [node name="Latern" type="Sprite2D" parent="Sprite2D"]
@@ -200,6 +397,12 @@ script = ExtResource("14_b8l4w")
 libraries = {
 "": SubResource("AnimationLibrary_4wrf8")
 }
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+libraries = {
+"": SubResource("AnimationLibrary_cq3gu")
+}
+script = ExtResource("10_ivrbn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 4)
@@ -221,7 +424,6 @@ stream = SubResource("AudioStreamRandomizer_ddlwf")
 libraries = {
 "": SubResource("AnimationLibrary_d6kr5")
 }
-script = ExtResource("10_ivrbn")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 energy = 0.0

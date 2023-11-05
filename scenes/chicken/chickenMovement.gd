@@ -25,12 +25,9 @@ func _process(_delta: float):
 	if data.terrain == WATER_TILE_TERRAIN && GameState.has_swimmer:
 		# chicken is in water
 		GameState.is_in_water = true
-		$Sprite2D/Swimmer.visible = true
-		$Sprite2D.texture = SWIMMING
+		$Sprite2D/AnimationPlayer.play("Swimming")
 	else:
 		GameState.is_in_water = false
-		$Sprite2D/Swimmer.visible = false
-		$Sprite2D.texture = NORMAL
 
 func _physics_process(delta: float):
 	var real_speed = speed * delta * clamp(GameState.level, 1, 3)
@@ -41,10 +38,12 @@ func _physics_process(delta: float):
 
 	velocity = input_direction * real_speed
 	if input_direction != Vector2(0, 0):
+		$Sprite2D/AnimationPlayer.play("Walking")
 		if !$WalkAudioStreamPlayer2D.playing:
 			$WalkAudioStreamPlayer2D.play()
 		$Sprite2D.flip_h = input_direction.x < 0
-		$Sprite2D/Swimmer.flip_h = !$Sprite2D.flip_h
+	else:
+		$Sprite2D/AnimationPlayer.play("Idle")
 
 	# sprint
 	if Input.is_action_just_pressed("sprint") && !sprinting && GameState.has_sprint:
