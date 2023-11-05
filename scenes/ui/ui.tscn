@@ -30,7 +30,7 @@ grow_horizontal = 2
 
 [node name="FoodLabel" type="Label" parent="ui/HBoxContainer"]
 layout_mode = 2
-text = "Food: "
+text = "Food 🌽: "
 label_settings = ExtResource("1_5dksh")
 
 [node name="ProgressBar" type="ProgressBar" parent="ui/HBoxContainer"]
@@ -43,7 +43,7 @@ script = ExtResource("2_vufxw")
 
 [node name="LevelLabel" type="Label" parent="ui/HBoxContainer"]
 layout_mode = 2
-text = "    Level: "
+text = "    Level 🐣: "
 label_settings = ExtResource("1_5dksh")
 
 [node name="LevelValueLabel" type="Label" parent="ui/HBoxContainer"]
@@ -59,7 +59,7 @@ label_settings = ExtResource("1_5dksh")
 
 [node name="EggsLabel" type="Label" parent="ui/HBoxContainer"]
 layout_mode = 2
-text = "Eggs: "
+text = "Eggs 🥚: "
 label_settings = ExtResource("1_5dksh")
 
 [node name="EggsValueLabel" type="Label" parent="ui/HBoxContainer"]
@@ -77,17 +77,15 @@ offset_bottom = 631.0
 script = ExtResource("5_12uv2")
 
 [node name="Swimmer" type="Sprite2D" parent="ui/ItemsContainer"]
-visible = false
-position = Vector2(198, 16)
+position = Vector2(261, 18)
 texture = ExtResource("5_tgaps")
 
 [node name="Lantern" type="Sprite2D" parent="ui/ItemsContainer"]
-visible = false
-position = Vector2(123, 16)
+position = Vector2(166, 18)
 scale = Vector2(4.25, 4.25)
 texture = ExtResource("6_f3ejk")
 
 [node name="Label" type="Label" parent="ui/ItemsContainer"]
 layout_mode = 2
-text = "Items: "
+text = "Items 📦: "
 label_settings = ExtResource("1_5dksh")
