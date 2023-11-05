@@ -19,6 +19,10 @@ config/icon="res://icon.png"
 
 GameState="*res://global/gameState.gd"
 
+[display]
+
+window/stretch/mode="viewport"
+
 [input]
 
 move_left={
