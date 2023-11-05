@@ -13,12 +13,20 @@ func kill_the_wolf(collider):
 
 
 func _physics_process(delta: float):
+	if !GameState.has_shotgun:
+		return
+	get_parent().get_node("Sprite2D/Shotgun").visible = true
+
 	if $ShotsFIred/ShotgunGPUParticles2D.emitting:
 		return
 
 	var target_point = global_position + get_parent().velocity
 	$ShotsFIred.look_at(target_point)
 	if Input.is_action_just_pressed("shoot"):
+		if GameState.ammo <= 0:
+			return
+
+		GameState.ammo -= 1
 		$ShotsFIred/ShotgunGPUParticles2D.emitting = true
 		$ShotsFIred/ShotgunRayCast
 

@@ -43,6 +43,7 @@ func _physics_process(delta: float):
 		if !$WalkAudioStreamPlayer2D.playing:
 			$WalkAudioStreamPlayer2D.play()
 		$Sprite2D.flip_h = input_direction.x < 0
+		$Sprite2D/Shotgun.flip_h = input_direction.x < 0
 	else:
 		$Sprite2D/AnimationPlayer.play("Idle")
 

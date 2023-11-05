@@ -1,11 +1,12 @@
-[gd_scene load_steps=38 format=3 uid="uid://cs8d3sukjl1q7"]
+[gd_scene load_steps=39 format=3 uid="uid://cs8d3sukjl1q7"]
 
 [ext_resource type="Script" path="res://scenes/chicken/chickenMovement.gd" id="1_idpav"]
 [ext_resource type="Texture2D" uid="uid://b8bfkowu0j6o2" path="res://scenes/chicken/Chicken-0002.png" id="2_qwtd8"]
 [ext_resource type="Script" path="res://scenes/chicken/chickenCluck.gd" id="3_f7rxb"]
-[ext_resource type="AudioStream" uid="uid://di4jrrk0qowdi" path="res://assets/sound/chicken_cluck0.mp3" id="3_ooivu"]
-[ext_resource type="AudioStream" uid="uid://bki1yaw285bf0" path="res://assets/sound/chicken_cluck1.mp3" id="4_qrlbq"]
-[ext_resource type="AudioStream" uid="uid://dswqsbnusk0ip" path="res://assets/sound/chicken_cluck2.mp3" id="5_k10mf"]
+[ext_resource type="AudioStream" uid="uid://2vxfqsfkccx5" path="res://assets/sound/chicken_cluck0.mp3" id="3_ooivu"]
+[ext_resource type="AudioStream" uid="uid://b2r888btaoarl" path="res://assets/sound/chicken_cluck1.mp3" id="4_qrlbq"]
+[ext_resource type="AudioStream" uid="uid://ds5br7r2ikurl" path="res://assets/sound/chicken_cluck2.mp3" id="5_k10mf"]
+[ext_resource type="Texture2D" uid="uid://ys7gfpxqncqx" path="res://assets/chicken/shotgun.png" id="6_botss"]
 [ext_resource type="AudioStream" uid="uid://dq26sc2hlncpn" path="res://assets/sound/chicken_walk0.mp3" id="7_g0jjt"]
 [ext_resource type="AudioStream" uid="uid://8cuo3c0ep8rr" path="res://assets/sound/chicken_walk1.mp3" id="8_nvlb5"]
 [ext_resource type="AudioStream" uid="uid://vcmji10sdmur" path="res://assets/sound/chicken_walk2.mp3" id="9_jcdfi"]
@@ -18,44 +19,6 @@
 [ext_resource type="Script" path="res://scenes/chicken/levelupEffect.gd" id="15_ccao3"]
 [ext_resource type="Script" path="res://scenes/chicken/shotgun.gd" id="16_4nkc2"]
 [ext_resource type="Texture2D" uid="uid://vdnlfk2hgik1" path="res://assets/chicken/egg.png" id="17_isksg"]
-
-[sub_resource type="Animation" id="Animation_f51qs"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-
-[sub_resource type="Animation" id="Animation_6qd0x"]
-resource_name = "lantern_swing"
-length = 2.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1, 2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [-0.698132, 0.698132, -0.698132]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_4wrf8"]
-_data = {
-"RESET": SubResource("Animation_f51qs"),
-"lantern_swing": SubResource("Animation_6qd0x")
-}
 
 [sub_resource type="Animation" id="Animation_py8d4"]
 length = 0.6
@@ -256,6 +219,44 @@ _data = {
 "Walking": SubResource("Animation_urle4")
 }
 
+[sub_resource type="Animation" id="Animation_f51qs"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_6qd0x"]
+resource_name = "lantern_swing"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.698132, 0.698132, -0.698132]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4wrf8"]
+_data = {
+"RESET": SubResource("Animation_f51qs"),
+"lantern_swing": SubResource("Animation_6qd0x")
+}
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_6jixd"]
 radius = 12.6491
 
@@ -414,6 +415,18 @@ metadata/_aseprite_wizard_config_ = {
 "source": "res://assets/chicken/Chicken-0002.aseprite"
 }
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+libraries = {
+"": SubResource("AnimationLibrary_cq3gu")
+}
+script = ExtResource("10_ivrbn")
+
+[node name="Shotgun" type="Sprite2D" parent="Sprite2D"]
+visible = false
+position = Vector2(0, 8)
+scale = Vector2(0.184211, 0.184211)
+texture = ExtResource("6_botss")
+
 [node name="Latern" type="Sprite2D" parent="Sprite2D"]
 texture_filter = 1
 position = Vector2(2, 6)
@@ -425,12 +438,6 @@ script = ExtResource("14_b8l4w")
 libraries = {
 "": SubResource("AnimationLibrary_4wrf8")
 }
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
-libraries = {
-"": SubResource("AnimationLibrary_cq3gu")
-}
-script = ExtResource("10_ivrbn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 4)
@@ -487,6 +494,7 @@ wait_time = 0.2
 one_shot = true
 
 [node name="ShotsFIred" type="Node2D" parent="Shotgun"]
+position = Vector2(8, 4)
 
 [node name="ShotgunGPUParticles2D" type="GPUParticles2D" parent="Shotgun/ShotsFIred"]
 rotation = 1.5708

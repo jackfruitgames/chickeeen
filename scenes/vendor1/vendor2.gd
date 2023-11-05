@@ -11,6 +11,7 @@ func _process(_delta:float):
 		if Input.is_action_just_pressed("lay_egg") && has_enough_eggs():
 			GameState.eggs -= 10
 			GameState.has_shotgun = true
+			GameState.ammo = 5
 			print("Chicken now has SHOTGUN!")
 
 func _on_body_entered(body):

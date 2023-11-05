@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://80jawqck3m24"]
+[gd_scene load_steps=10 format=3 uid="uid://80jawqck3m24"]
 
 [ext_resource type="LabelSettings" uid="uid://b3dnwdl6xc1h6" path="res://scenes/ui/uiLabelStyle.tres" id="1_5dksh"]
 [ext_resource type="Script" path="res://scenes/ui/UpdateLevel.gd" id="2_fv3t8"]
@@ -7,6 +7,8 @@
 [ext_resource type="Script" path="res://scenes/ui/ItemsContainer.gd" id="5_12uv2"]
 [ext_resource type="Texture2D" uid="uid://dsql2g8oifqsk" path="res://assets/chicken/swimmer.png" id="5_tgaps"]
 [ext_resource type="Texture2D" uid="uid://cgp8fj3gmmdnk" path="res://assets/Latern/Latern-black.png" id="6_f3ejk"]
+[ext_resource type="Texture2D" uid="uid://ys7gfpxqncqx" path="res://assets/chicken/shotgun.png" id="8_5e32j"]
+[ext_resource type="Script" path="res://scenes/ui/updateAmmoValue.gd" id="9_6pgu6"]
 
 [node name="UILayer" type="CanvasLayer"]
 
@@ -69,11 +71,17 @@ label_settings = ExtResource("1_5dksh")
 script = ExtResource("4_6nopd")
 
 [node name="ItemsContainer" type="HBoxContainer" parent="ui"]
-layout_mode = 2
-offset_left = 60.0
-offset_top = 594.0
-offset_right = 138.0
-offset_bottom = 631.0
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = -48.0
+offset_right = -40.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 0
 script = ExtResource("5_12uv2")
 
 [node name="Swimmer" type="Sprite2D" parent="ui/ItemsContainer"]
@@ -93,3 +101,28 @@ texture = ExtResource("6_f3ejk")
 layout_mode = 2
 text = "Items 📦: "
 label_settings = ExtResource("1_5dksh")
+
+[node name="Shotgun" type="Sprite2D" parent="ui/ItemsContainer"]
+visible = false
+position = Vector2(368, 23)
+scale = Vector2(0.552632, 0.552632)
+texture = ExtResource("8_5e32j")
+
+[node name="AmmoContainer" type="HBoxContainer" parent="ui/ItemsContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 2
+
+[node name="AmmoLabel" type="Label" parent="ui/ItemsContainer/AmmoContainer"]
+layout_mode = 2
+text = "Ammo 💥: "
+label_settings = ExtResource("1_5dksh")
+horizontal_alignment = 2
+
+[node name="AmmoValueLabel" type="Label" parent="ui/ItemsContainer/AmmoContainer"]
+layout_mode = 2
+text = "0"
+label_settings = ExtResource("1_5dksh")
+horizontal_alignment = 2
+script = ExtResource("9_6pgu6")
