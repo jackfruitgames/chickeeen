@@ -78,11 +78,13 @@ script = ExtResource("5_12uv2")
 
 [node name="Swimmer" type="Sprite2D" parent="ui/ItemsContainer"]
 visible = false
+texture_filter = 1
 position = Vector2(261, 18)
 texture = ExtResource("5_tgaps")
 
 [node name="Lantern" type="Sprite2D" parent="ui/ItemsContainer"]
 visible = false
+texture_filter = 1
 position = Vector2(166, 18)
 scale = Vector2(4.25, 4.25)
 texture = ExtResource("6_f3ejk")
