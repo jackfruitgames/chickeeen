@@ -1,6 +1,6 @@
 extends Timer
 
-const BASE_NUMBER_OF_ENEMIES := 10
+const BASE_NUMBER_OF_ENEMIES := 15
 const HOUSE_POSITION := Vector2(200, 200)
 
 var rng = RandomNumberGenerator.new()
