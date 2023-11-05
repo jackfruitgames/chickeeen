@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://80jawqck3m24"]
+[gd_scene load_steps=11 format=3 uid="uid://80jawqck3m24"]
 
 [ext_resource type="LabelSettings" uid="uid://b3dnwdl6xc1h6" path="res://scenes/ui/uiLabelStyle.tres" id="1_5dksh"]
 [ext_resource type="Script" path="res://scenes/ui/UpdateLevel.gd" id="2_fv3t8"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://scenes/ui/ItemsContainer.gd" id="5_12uv2"]
 [ext_resource type="Texture2D" uid="uid://dsql2g8oifqsk" path="res://assets/chicken/swimmer.png" id="5_tgaps"]
 [ext_resource type="Texture2D" uid="uid://cgp8fj3gmmdnk" path="res://assets/Latern/Latern-black.png" id="6_f3ejk"]
+[ext_resource type="Texture2D" uid="uid://dt6rw4grjls8h" path="res://assets/question.png" id="6_n3e6w"]
 [ext_resource type="Texture2D" uid="uid://ys7gfpxqncqx" path="res://assets/chicken/shotgun.png" id="8_5e32j"]
 [ext_resource type="Script" path="res://scenes/ui/updateAmmoValue.gd" id="9_6pgu6"]
 
@@ -84,11 +85,28 @@ grow_horizontal = 2
 grow_vertical = 0
 script = ExtResource("5_12uv2")
 
+[node name="Label" type="Label" parent="ui/ItemsContainer"]
+layout_mode = 2
+text = "Items 📦: "
+label_settings = ExtResource("1_5dksh")
+
+[node name="SwimmerP" type="Sprite2D" parent="ui/ItemsContainer"]
+texture_filter = 1
+position = Vector2(265, 20)
+scale = Vector2(0.1, 0.0726537)
+texture = ExtResource("6_n3e6w")
+
 [node name="Swimmer" type="Sprite2D" parent="ui/ItemsContainer"]
 visible = false
 texture_filter = 1
 position = Vector2(261, 18)
 texture = ExtResource("5_tgaps")
+
+[node name="LanternP" type="Sprite2D" parent="ui/ItemsContainer"]
+texture_filter = 1
+position = Vector2(165, 20)
+scale = Vector2(0.1, 0.073)
+texture = ExtResource("6_n3e6w")
 
 [node name="Lantern" type="Sprite2D" parent="ui/ItemsContainer"]
 visible = false
@@ -97,10 +115,11 @@ position = Vector2(166, 18)
 scale = Vector2(4.25, 4.25)
 texture = ExtResource("6_f3ejk")
 
-[node name="Label" type="Label" parent="ui/ItemsContainer"]
-layout_mode = 2
-text = "Items 📦: "
-label_settings = ExtResource("1_5dksh")
+[node name="ShotgunP" type="Sprite2D" parent="ui/ItemsContainer"]
+texture_filter = 1
+position = Vector2(362, 22)
+scale = Vector2(0.1, 0.075)
+texture = ExtResource("6_n3e6w")
 
 [node name="Shotgun" type="Sprite2D" parent="ui/ItemsContainer"]
 visible = false
