@@ -57,7 +57,6 @@ func spawn_some_foods():
 	for i in NUMBER_OF_FOOD:
 		var food_instance = FOOD.instantiate()
 		var position = get_valid_position()
-		print("Spawning food at: ", position)
 		food_instance.position = position
 		get_parent().call_deferred("add_child", food_instance)
 

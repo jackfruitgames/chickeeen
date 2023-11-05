@@ -62,7 +62,6 @@ func spawn_some_enemies(n_enemies: int):
 	for i in n_enemies:
 		var wolf_instance = WOLF.instantiate()
 		var position = get_valid_position()
-		print("Spawning wolf at: ", position)
 		wolf_instance.position = position
 		get_parent().call_deferred("add_child", wolf_instance)
 

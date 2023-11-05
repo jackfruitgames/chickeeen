@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://scenes/food/eating.gd" id="1_vc0rm"]
 [ext_resource type="Texture2D" uid="uid://c1nhvftamn5vy" path="res://scenes/food/Corn-0001.png" id="2_oxla4"]
-[ext_resource type="AudioStream" uid="uid://17q35ic3860v" path="res://assets/sound/chicken_eat0.mp3" id="3_hvbmr"]
-[ext_resource type="AudioStream" uid="uid://ccmsjgltvhh2g" path="res://assets/sound/chicken_eat1.mp3" id="4_o0jy3"]
-[ext_resource type="AudioStream" uid="uid://d1nlqy5k0vsy4" path="res://assets/sound/chicken_eat2.mp3" id="5_hsk8a"]
+[ext_resource type="AudioStream" uid="uid://c2sq82vsso3h7" path="res://assets/sound/chicken_eat0.mp3" id="3_hvbmr"]
+[ext_resource type="AudioStream" uid="uid://uswvwdkasr3f" path="res://assets/sound/chicken_eat1.mp3" id="4_o0jy3"]
+[ext_resource type="AudioStream" uid="uid://daqvrvyg2offc" path="res://assets/sound/chicken_eat2.mp3" id="5_hsk8a"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ywk0f"]
 radius = 5.0
