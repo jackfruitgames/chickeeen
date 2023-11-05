@@ -22,6 +22,7 @@ GameState="*res://global/gameState.gd"
 [display]
 
 window/stretch/mode="viewport"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/AsepriteWizard/plugin.cfg")

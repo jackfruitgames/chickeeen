@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://7vql1uclie4w"]
+[gd_scene load_steps=45 format=3 uid="uid://7vql1uclie4w"]
 
 [ext_resource type="Texture2D" uid="uid://ciab5ofii7qw6" path="res://assets/Tilesets/TilesetFloor.png" id="1_24wf7"]
 [ext_resource type="Texture2D" uid="uid://ct8ugvaqny2kg" path="res://assets/Tilesets/TilesetWater.png" id="1_oomac"]
@@ -17,6 +17,7 @@
 [ext_resource type="AudioStream" uid="uid://dsxrhf65ncder" path="res://assets/music/road-to-paris-gypsy-jazz-144631.mp3" id="15_445im"]
 [ext_resource type="Script" path="res://scenes/outdoors/AudioStreamPlayer.gd" id="16_4sx54"]
 [ext_resource type="Script" path="res://scenes/house/torch.gd" id="16_l53a0"]
+[ext_resource type="Script" path="res://scenes/vendor1/vendor2.gd" id="16_svwv2"]
 [ext_resource type="Script" path="res://scenes/outdoors/Swimmy.gd" id="17_kcbg8"]
 [ext_resource type="Texture2D" uid="uid://dsql2g8oifqsk" path="res://assets/chicken/swimmer.png" id="17_vy834"]
 [ext_resource type="Script" path="res://scenes/outdoors/LevelUpUi.gd" id="19_q2tmb"]
@@ -10053,6 +10054,10 @@ shape = SubResource("SegmentShape2D_6tmml")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="MapWall"]
 shape = SubResource("SegmentShape2D_hgpt2")
+
+[node name="vendor2" parent="." instance=ExtResource("15_6vq1c")]
+position = Vector2(1336, 474)
+script = ExtResource("16_svwv2")
 
 [node name="vendor1" parent="." instance=ExtResource("15_6vq1c")]
 position = Vector2(90, -6)
