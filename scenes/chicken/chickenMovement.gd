@@ -31,7 +31,7 @@ func _process(_delta: float):
 		GameState.is_in_water = false
 
 func _physics_process(delta: float):
-	var real_speed = speed * delta * (clamp(GameState.level, 1, 3) * 0.75)
+	var real_speed = speed * delta * (clamp(GameState.level, 1, 3) * 0.5)
 	var input_direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 
 	if GameState.is_in_water:
