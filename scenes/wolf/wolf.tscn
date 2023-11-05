@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://b6gdw1paj3son"]
+[gd_scene load_steps=8 format=3 uid="uid://b6gdw1paj3son"]
 
 [ext_resource type="Texture2D" uid="uid://bf3f3hm601mco" path="res://scenes/wolf/Wolf-0002.png" id="2_etrxf"]
+[ext_resource type="Script" path="res://scenes/wolf/wolfCollider.gd" id="2_htlh1"]
 [ext_resource type="Script" path="res://scenes/wolf/movement.gd" id="3_7ieju"]
 [ext_resource type="Script" path="res://scenes/wolf/killOnDay.gd" id="4_5u0x1"]
 
@@ -30,6 +31,7 @@ texture = ExtResource("2_etrxf")
 position = Vector2(2, 2)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_q5wqx")
+script = ExtResource("2_htlh1")
 
 [node name="killOnDay" type="Node" parent="."]
 script = ExtResource("4_5u0x1")
