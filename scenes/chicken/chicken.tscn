@@ -1,9 +1,11 @@
-[gd_scene load_steps=29 format=3 uid="uid://cs8d3sukjl1q7"]
+[gd_scene load_steps=31 format=3 uid="uid://cs8d3sukjl1q7"]
 
 [ext_resource type="Script" path="res://scenes/chicken/chickenMovement.gd" id="1_idpav"]
 [ext_resource type="Texture2D" uid="uid://ck8icr1crrqxw" path="res://scenes/chicken/Chicken-0001.png" id="2_oiiyn"]
 [ext_resource type="Script" path="res://scenes/chicken/chickenCluck.gd" id="3_f7rxb"]
 [ext_resource type="AudioStream" uid="uid://j23lpail1p57" path="res://assets/sound/chicken_cluck0.mp3" id="3_ooivu"]
+[ext_resource type="Texture2D" uid="uid://dsql2g8oifqsk" path="res://assets/chicken/swimmer.png" id="3_ws6fq"]
+[ext_resource type="Script" path="res://scenes/chicken/Swimmer.gd" id="4_2mfwn"]
 [ext_resource type="AudioStream" uid="uid://bthyencc6mu0g" path="res://assets/sound/chicken_cluck1.mp3" id="4_qrlbq"]
 [ext_resource type="AudioStream" uid="uid://bsxikwto3kcak" path="res://assets/sound/chicken_cluck2.mp3" id="5_k10mf"]
 [ext_resource type="AudioStream" uid="uid://dq26sc2hlncpn" path="res://assets/sound/chicken_walk0.mp3" id="7_g0jjt"]
@@ -173,6 +175,18 @@ script = ExtResource("1_idpav")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 texture = ExtResource("2_oiiyn")
+
+[node name="Swimmer" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(2, 8)
+scale = Vector2(0.415005, 0.371543)
+texture = ExtResource("3_ws6fq")
+flip_h = true
+script = ExtResource("4_2mfwn")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D/Swimmer"]
+libraries = {
+"": SubResource("AnimationLibrary_4wrf8")
+}
 
 [node name="Latern" type="Sprite2D" parent="Sprite2D"]
 texture_filter = 1

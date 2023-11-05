@@ -10,6 +10,7 @@ var eggs := 0
 # -- chicken features
 var has_torch := false
 var has_speaker := false
+var has_swimmer := false
 var has_stick := false
 var has_shotgun := false
 var has_sprint := false
@@ -37,6 +38,8 @@ func reset_game():
 	level = 1
 	is_night = false
 	is_dawn = false
+	has_swimmer = false
+	has_torch = false
 	dawn_time = DAWN_TIME
 	day_duration = DAY_DURATION
 	eggs = 0
