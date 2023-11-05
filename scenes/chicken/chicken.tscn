@@ -177,6 +177,7 @@ texture_filter = 1
 texture = ExtResource("2_oiiyn")
 
 [node name="Swimmer" type="Sprite2D" parent="Sprite2D"]
+visible = false
 position = Vector2(2, 8)
 scale = Vector2(0.415005, 0.371543)
 texture = ExtResource("3_ws6fq")

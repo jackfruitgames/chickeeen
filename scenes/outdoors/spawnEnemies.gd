@@ -23,7 +23,7 @@ func spawn_some_enemies(n_enemies: int):
 
 func _on_timeout():
 	var num := rng.randi_range(0, 2)
-	if (GameState.is_dawn) && num == 2:
+	if GameState.is_dawn && num == 2:
 		print("spwawning early wolf")
 		spawn_some_enemies(1)
 		

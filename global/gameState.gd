@@ -6,6 +6,7 @@ const MAX_EATING_SCORE := 100
 var score := INITIAL_SCORE
 var level := 1
 var eggs := 0
+var is_in_water := false
 
 # -- chicken features
 var has_torch := false
