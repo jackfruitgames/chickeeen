@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://7vql1uclie4w"]
+[gd_scene load_steps=44 format=3 uid="uid://7vql1uclie4w"]
 
 [ext_resource type="Texture2D" uid="uid://ciab5ofii7qw6" path="res://assets/Tilesets/TilesetFloor.png" id="1_24wf7"]
 [ext_resource type="Texture2D" uid="uid://ct8ugvaqny2kg" path="res://assets/Tilesets/TilesetWater.png" id="1_oomac"]
@@ -13,7 +13,7 @@
 [ext_resource type="Script" path="res://scenes/outdoors/night.gd" id="8_ar56u"]
 [ext_resource type="Script" path="res://scenes/outdoors/spawnEnemies.gd" id="9_8m8rw"]
 [ext_resource type="Script" path="res://scenes/outdoors/dim.gd" id="9_lwkoc"]
-[ext_resource type="Script" path="res://scenes/outdoors/Vendor1.gd" id="14_2656u"]
+[ext_resource type="PackedScene" uid="uid://bfv3d5trk568q" path="res://scenes/vendor1/vendor1.tscn" id="15_6vq1c"]
 [ext_resource type="AudioStream" uid="uid://dsxrhf65ncder" path="res://assets/music/road-to-paris-gypsy-jazz-144631.mp3" id="15_445im"]
 [ext_resource type="Script" path="res://scenes/outdoors/AudioStreamPlayer.gd" id="16_4sx54"]
 [ext_resource type="Script" path="res://scenes/house/torch.gd" id="16_l53a0"]
@@ -9921,6 +9921,15 @@ vertices = PackedVector2Array(1544, 281, 883, 321, 210, 223, 207, 174, 877, 99, 
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(5, 6, 7, 8, 9, 10), PackedInt32Array(11, 12, 13, 14, 15), PackedInt32Array(6, 5, 16), PackedInt32Array(17, 6, 16), PackedInt32Array(17, 16, 18, 19), PackedInt32Array(14, 13, 20, 21), PackedInt32Array(21, 20, 22, 23), PackedInt32Array(8, 24, 25, 9), PackedInt32Array(24, 12, 11, 0), PackedInt32Array(24, 0, 26, 27), PackedInt32Array(28, 11, 15), PackedInt32Array(28, 15, 29), PackedInt32Array(28, 29, 30), PackedInt32Array(1, 28, 30), PackedInt32Array(2, 1, 30, 23), PackedInt32Array(2, 23, 22, 31), PackedInt32Array(32, 31, 22, 33, 34), PackedInt32Array(5, 10, 35, 36, 37, 38, 39), PackedInt32Array(39, 38, 40), PackedInt32Array(19, 39, 40, 41), PackedInt32Array(17, 19, 41, 42), PackedInt32Array(25, 24, 27, 43), PackedInt32Array(35, 25, 43, 44), PackedInt32Array(35, 44, 45, 36), PackedInt32Array(46, 47, 4, 48), PackedInt32Array(49, 50, 48, 4, 3), PackedInt32Array(38, 37, 48, 50, 51), PackedInt32Array(52, 38, 51, 34, 33), PackedInt32Array(53, 54, 55, 56, 57, 17, 58), PackedInt32Array(59, 58, 17, 42, 52), PackedInt32Array(33, 59, 52), PackedInt32Array(32, 34, 49, 3), PackedInt32Array(0, 4, 26)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(-569, -883, 1126, -844, 1827, -683, 1762, -43, 1932, 783, 1193, 1181, -57, 1095, 112, 619, -160, 1, -530, -110, -583, -14, -271, 77, -147, 311, -54, 614, -341, 1130, -800, 1012, -936, 69), PackedVector2Array(646, -543, 997, -548, 1045, -384, 662, -276), PackedVector2Array(883, 321, 1544, 281, 1594, 722, 888, 725), PackedVector2Array(508, 490, 349, 886, 916, 944, 901, 735, 594, 707, 757, 508), PackedVector2Array(160, 182, 207, 174, 210, 223, 159, 224), PackedVector2Array(41, 77, 72, 50, 135, 56, 117, 105), PackedVector2Array(-597, -762, -603, -592, -456, -560, -313, -730, -597, -771), PackedVector2Array(-576, -519, -618, -297, -455, -252, -353, -345, -501, -523), PackedVector2Array(818, -61, 877, 99, 1099, 51, 1084, -104, 952, -207, 810, -200, 717, -57, 630, -55, 587, -56, 688, 22, 760, -48)])
 
+[sub_resource type="Gradient" id="Gradient_fsym2"]
+offsets = PackedFloat32Array(0.0978723, 0.668085)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ou2y1"]
+gradient = SubResource("Gradient_fsym2")
+fill = 1
+fill_from = Vector2(0.525641, 0.521368)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_krwh3"]
 size = Vector2(14, 13)
 
@@ -9941,18 +9950,6 @@ b = Vector2(-1352, -1133)
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_hgpt2"]
 a = Vector2(-1187, -1230)
 b = Vector2(-1140, 1478)
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_1l4do"]
-radius = 12.0416
-
-[sub_resource type="Gradient" id="Gradient_fsym2"]
-offsets = PackedFloat32Array(0.0978723, 0.668085)
-colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_ou2y1"]
-gradient = SubResource("Gradient_fsym2")
-fill = 1
-fill_from = Vector2(0.525641, 0.521368)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xrax8"]
 size = Vector2(54.3997, 31.7333)
@@ -10006,6 +10003,14 @@ limit_bottom = 1000
 limit_smoothed = true
 position_smoothing_enabled = true
 
+[node name="HousePointLight2D" type="PointLight2D" parent="."]
+position = Vector2(184, 217)
+scale = Vector2(2.59375, 2.21094)
+color = Color(0.87451, 0.686275, 0.447059, 1)
+energy = 0.7
+texture = SubResource("GradientTexture2D_ou2y1")
+script = ExtResource("16_l53a0")
+
 [node name="Door" type="Area2D" parent="."]
 collision_layer = 2
 collision_mask = 2
@@ -10049,32 +10054,8 @@ shape = SubResource("SegmentShape2D_6tmml")
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="MapWall"]
 shape = SubResource("SegmentShape2D_hgpt2")
 
-[node name="Vendor 1" type="Area2D" parent="."]
-script = ExtResource("14_2656u")
-
-[node name="Vendor 1" type="CollisionShape2D" parent="Vendor 1"]
-position = Vector2(89, -6)
-shape = SubResource("CircleShape2D_1l4do")
-
-[node name="BuyConfirm" type="CanvasLayer" parent="Vendor 1"]
-layer = 6
-visible = false
-
-[node name="Label" type="Label" parent="Vendor 1/BuyConfirm"]
-anchors_preset = 14
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -3.0
-offset_top = 118.0
-offset_right = -3.0
-offset_bottom = 300.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 64
-text = "Buy Torch?
-E: Confirm"
-horizontal_alignment = 1
+[node name="vendor1" parent="." instance=ExtResource("15_6vq1c")]
+position = Vector2(90, -6)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 process_mode = 3
@@ -10082,14 +10063,6 @@ stream = ExtResource("15_445im")
 volume_db = -20.0
 autoplay = true
 script = ExtResource("16_4sx54")
-
-[node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(184, 217)
-scale = Vector2(2.59375, 2.21094)
-color = Color(0.87451, 0.686275, 0.447059, 1)
-energy = 0.7
-texture = SubResource("GradientTexture2D_ou2y1")
-script = ExtResource("16_l53a0")
 
 [node name="Swimmy" type="Area2D" parent="."]
 position = Vector2(1326, 87)
@@ -10186,8 +10159,6 @@ text = "Lay Egg!"
 [connection signal="body_entered" from="Door" to="Door" method="_on_body_entered"]
 [connection signal="timeout" from="enemies" to="enemies" method="_on_timeout"]
 [connection signal="timeout" from="NightTimer" to="NightTimer" method="_on_timeout"]
-[connection signal="body_entered" from="Vendor 1" to="Vendor 1" method="_on_body_entered"]
-[connection signal="body_exited" from="Vendor 1" to="Vendor 1" method="_on_body_exited"]
 [connection signal="body_entered" from="Swimmy" to="Swimmy" method="_on_body_entered"]
 [connection signal="pressed" from="LevelUpUi/ColorRect/LevelUpButton" to="LevelUpUi" method="_on_level_up_button_pressed"]
 [connection signal="pressed" from="LevelUpUi/ColorRect/LayEggButton" to="LevelUpUi" method="_on_lay_egg_button_pressed"]
