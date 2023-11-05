@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://d7hhbhwn8gkb"]
+[gd_scene load_steps=7 format=3 uid="uid://b6gdw1paj3son"]
 
 [ext_resource type="Texture2D" uid="uid://bf3f3hm601mco" path="res://scenes/wolf/Wolf-0002.png" id="2_etrxf"]
 [ext_resource type="Script" path="res://scenes/wolf/movement.gd" id="3_7ieju"]

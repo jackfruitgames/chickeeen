@@ -40,6 +40,7 @@ func reset_game():
 	is_dawn = false
 	has_swimmer = false
 	has_torch = false
+	
 	dawn_time = DAWN_TIME
 	day_duration = DAY_DURATION
 	eggs = 0

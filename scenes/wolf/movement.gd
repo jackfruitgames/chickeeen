@@ -26,5 +26,6 @@ func _physics_process(delta):
 			wolf.move_and_slide()
 		for i in wolf.get_slide_collision_count():
 			var collision = wolf.get_slide_collision(i)
-			print("Death by wolf: ", collision.get_collider().name)
-			get_tree().change_scene_to_file("res://scenes/gameover/gameover.tscn")
+			if collision.get_collider().is_in_group("player"):
+				print("Death by wolf: ", collision.get_collider().name)
+				get_tree().change_scene_to_file("res://scenes/gameover/gameover.tscn")
