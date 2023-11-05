@@ -1,7 +1,7 @@
 # 🐣 Chickeeen !!!
 
 You are a chicken! You need to eat food, lay eggs and collect stuff.
-A small game implemented during GoDot Con 2023 in Munich 🇩🇪🥨
+A small game implemented during godot con 2023 in Munich 🇩🇪🥨
 
 <p align="center">
   <a href="https://eddex.itch.io/chickeeen" target="_blank">
