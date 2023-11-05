@@ -1,19 +1,32 @@
-[gd_scene load_steps=5 format=3 uid="uid://ce3m76ikq0w7o"]
+[gd_scene load_steps=7 format=3 uid="uid://ce3m76ikq0w7o"]
 
 [ext_resource type="PackedScene" uid="uid://cs8d3sukjl1q7" path="res://scenes/chicken/chicken.tscn" id="1_ko0ko"]
+[ext_resource type="Script" path="res://scenes/testscene/testFakes.gd" id="1_pnaqn"]
 [ext_resource type="PackedScene" uid="uid://bbpcd0gp83hu8" path="res://scenes/food/food.tscn" id="2_23w14"]
-[ext_resource type="PackedScene" uid="uid://d7hhbhwn8gkb" path="res://scenes/wolf/wolf.tscn" id="3_fa1vf"]
+[ext_resource type="PackedScene" uid="uid://b6gdw1paj3son" path="res://scenes/wolf/wolf.tscn" id="3_fa1vf"]
 [ext_resource type="PackedScene" uid="uid://80jawqck3m24" path="res://scenes/ui/ui.tscn" id="4_hf3ja"]
 
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_h8x7c"]
+vertices = PackedVector2Array(210, 124, 211, 279, 60, 276, 62, 130)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(62, 130, 60, 276, 211, 279, 210, 124)])
+
 [node name="testscene" type="Node2D"]
+script = ExtResource("1_pnaqn")
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_h8x7c")
 
 [node name="chicken" parent="." instance=ExtResource("1_ko0ko")]
 position = Vector2(200, 200)
 
+[node name="Camera2D" type="Camera2D" parent="chicken"]
+zoom = Vector2(4, 4)
+
 [node name="food" parent="." instance=ExtResource("2_23w14")]
-position = Vector2(185, 412)
+position = Vector2(207, 234)
 
 [node name="wolf" parent="." instance=ExtResource("3_fa1vf")]
-position = Vector2(81, 195)
+position = Vector2(138, 228)
 
 [node name="UILayer" parent="." instance=ExtResource("4_hf3ja")]
