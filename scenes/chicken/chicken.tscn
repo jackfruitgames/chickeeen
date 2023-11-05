@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://cs8d3sukjl1q7"]
+[gd_scene load_steps=36 format=3 uid="uid://cs8d3sukjl1q7"]
 
 [ext_resource type="Script" path="res://scenes/chicken/chickenMovement.gd" id="1_idpav"]
 [ext_resource type="Texture2D" uid="uid://b8bfkowu0j6o2" path="res://scenes/chicken/Chicken-0002.png" id="2_qwtd8"]
@@ -16,6 +16,7 @@
 [ext_resource type="Script" path="res://scenes/chicken/Latern.gd" id="14_b8l4w"]
 [ext_resource type="Script" path="res://scenes/chicken/levelupEffect.gd" id="15_ccao3"]
 [ext_resource type="Script" path="res://scenes/chicken/shotgun.gd" id="16_4nkc2"]
+[ext_resource type="Texture2D" uid="uid://vdnlfk2hgik1" path="res://assets/chicken/egg.png" id="17_isksg"]
 
 [sub_resource type="Animation" id="Animation_f51qs"]
 length = 0.001
@@ -365,16 +366,23 @@ hue_variation_min = -1.0
 hue_variation_max = 1.0
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_lkoc5"]
-emission_shape = 1
-emission_sphere_radius = 1.0
+emission_shape = 5
+emission_point_count = 1
 particle_flag_disable_z = true
-direction = Vector3(0, 1, 0)
 spread = 180.0
 flatness = 1.0
-gravity = Vector3(100, 0, 0)
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 3000.0
+initial_velocity_max = 3000.0
 orbit_velocity_min = 0.0
 orbit_velocity_max = 0.0
-radial_accel_max = 85.48
+linear_accel_min = 3000.0
+linear_accel_max = 3000.0
+tangential_accel_min = -200.0
+tangential_accel_max = 200.0
+scale_min = 0.01
+scale_max = 0.01
+turbulence_enabled = true
 
 [node name="chicken" type="CharacterBody2D" groups=["player"]]
 scale = Vector2(0.5, 0.5)
@@ -470,11 +478,15 @@ one_shot = true
 [node name="ShotsFIred" type="Node2D" parent="Shotgun"]
 
 [node name="ShotgunGPUParticles2D" type="GPUParticles2D" parent="Shotgun/ShotsFIred"]
+rotation = 1.5708
 emitting = false
-amount = 500
+amount = 20
 process_material = SubResource("ParticleProcessMaterial_lkoc5")
+texture = ExtResource("17_isksg")
+lifetime = 0.4
 one_shot = true
-explosiveness = 0.4
+explosiveness = 1.0
+randomness = 1.0
 local_coords = true
 
 [node name="ShotgunRayCast5" type="RayCast2D" parent="Shotgun/ShotsFIred" groups=["shoot"]]
