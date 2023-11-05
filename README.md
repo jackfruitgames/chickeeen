@@ -1,6 +1,7 @@
 # 🐣 Chickeeen !!!
 
 You are a chicken! You need to eat food, lay eggs and collect stuff.
+A small game implemented during GoDot Con 2023 in Munich 🇩🇪🥨
 
 <p align="center">
   <a href="https://eddex.itch.io/chickeeen" target="_blank">
@@ -24,14 +25,14 @@ You can:
 
  - 🐤 You can walk around 
  - 🌽 You can search and eat food 
- - ⚠️ Be carefull the further you go, the more dangerous it gets.
+ - ⚠️ Be carefull the further you go, the more dangerous it gets
  - 🐺At night, daemon wolfs will appear and kill you
- - 🥚 By eating food you can lay eggs, or level up.
- - 🐣 New levels will unlock new abilities ...
+ - 🥚 By eating food you can lay eggs, or level up
+ - 🐣 New levels will unlock new abilities
  - 💤 Sleep inside at night when you are scared
  - 🔫 Fight against your enemies with your shotgun
 
-*Have fun you are not smart but you are happy.*
+*Have fun, you are not smart but you are happy.*
 
 
 ## 🍗 Assets used:
