@@ -20,7 +20,7 @@ func _process(delta):
 	var tile := map.local_to_map(get_position())
 	var data = map.get_cell_tile_data(0, tile)
 	
-	if data.terrain == WATER_TILE_TERRAIN:
+	if data.terrain == WATER_TILE_TERRAIN && GameState.has_swimmer:
 		# chicken is in water
 		GameState.is_in_water = true
 		$Sprite2D/Swimmer.visible = true

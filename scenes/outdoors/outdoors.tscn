@@ -9975,6 +9975,7 @@ layer_1/tile_data = PackedInt32Array(-720892, 131075, 0, -655354, 131075, 0, -58
 navigation_polygon = SubResource("NavigationPolygon_43c3l")
 
 [node name="chicken" parent="." instance=ExtResource("3_jwf5e")]
+unique_name_in_owner = true
 z_index = 1
 position = Vector2(185, 233)
 collision_layer = 11
@@ -10002,7 +10003,7 @@ shape = SubResource("RectangleShape2D_krwh3")
 script = ExtResource("6_5tcl3")
 
 [node name="enemies" type="Timer" parent="."]
-wait_time = 30.0
+wait_time = 5.0
 autostart = true
 script = ExtResource("9_8m8rw")
 
