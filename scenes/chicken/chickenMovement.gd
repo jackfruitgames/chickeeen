@@ -37,7 +37,7 @@ func _physics_process(delta: float):
 	var input_direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 
 	if GameState.is_in_water:
-		real_speed = speed  # chicken is slower in water
+		real_speed = speed * delta  # chicken is slower in water
 
 	velocity = input_direction * real_speed
 	if input_direction != Vector2(0, 0):
