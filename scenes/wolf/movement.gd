@@ -23,4 +23,5 @@ func _physics_process(delta):
 			var current_enemy_position = wolf.global_position
 			var target_direction = (next_direction - current_enemy_position).normalized()
 			wolf.velocity = target_direction * (SPEED * delta)
+			get_parent().get_node("Sprite2D").flip_h = target_direction.x < 0
 			wolf.move_and_slide()
