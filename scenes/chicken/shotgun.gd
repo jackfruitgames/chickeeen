@@ -1,7 +1,7 @@
 extends Node2D
 
 var shoot_wolfs = []
-
+const DYING_WOLF = preload("res://scenes/wolf/dyingWolf.tscn")
 
 func kill_the_wolf(collider):
 	if collider != null and collider.is_in_group("wolf"):
@@ -52,5 +52,10 @@ func _physics_process(delta: float):
 
 func _on_wolf_killer_timer_timeout():
 	for w in shoot_wolfs:
+		var dying_animation = DYING_WOLF.instantiate()
+		dying_animation.position = w.position
+		print("wolf pos: ", w.position)
+		get_tree().get_root().call_deferred("add_child", dying_animation)
+		dying_animation.get_node("GPUParticles2D").emitting = true
 		w.queue_free()
 	shoot_wolfs = []
