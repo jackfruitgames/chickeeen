@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dk4mpglg1eg2l"
+path="res://.godot/imported/Scary Ambient Wind.mp3-1cb0921a894528d269e4379e568fbb5c.mp3str"
+
+[deps]
+
+source_file="res://assets/music/Scary Ambient Wind.mp3"
+dest_files=["res://.godot/imported/Scary Ambient Wind.mp3-1cb0921a894528d269e4379e568fbb5c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
