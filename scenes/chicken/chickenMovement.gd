@@ -3,6 +3,7 @@ extends CharacterBody2D
 var speed: float = 2500.0
 var sprinting: bool = false
 var map: TileMap = null
+var original_speed: float = 0
 
 const WATER_TILE_TERRAIN: int = 2
 const SWIMMING = preload("res://assets/chicken/Chicken-half.png")
@@ -30,7 +31,7 @@ func _process(_delta: float):
 		GameState.is_in_water = false
 
 func _physics_process(delta: float):
-	var real_speed = speed * delta * clamp(GameState.level, 1, 3)
+	var real_speed = speed * delta * (clamp(GameState.level, 1, 3) * 0.75)
 	var input_direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 
 	if GameState.is_in_water:
@@ -48,7 +49,8 @@ func _physics_process(delta: float):
 	# sprint
 	if Input.is_action_just_pressed("sprint") && !sprinting && GameState.has_sprint:
 		sprinting = true
-		speed = speed * 2
+		original_speed = speed
+		speed = speed * ((clamp(GameState.level, 4, 6) - 2) * 0.5)
 		$AnimationPlayer.stop()
 		$AnimationPlayer.play("backflip")
 		$SprintTimer.start()
@@ -59,6 +61,6 @@ func _physics_process(delta: float):
 func _on_sprint_timer_timeout():
 	$SprintTimer.stop()
 	sprinting = false
-	speed = speed / 2
+	speed = original_speed
 	$AnimationPlayer.stop()
 	$AnimationPlayer.play("chicken_default")
